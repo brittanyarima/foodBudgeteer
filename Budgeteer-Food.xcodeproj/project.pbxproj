@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18005D452787C3F000D13C2C /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18005D442787C3F000D13C2C /* RestaurantView.swift */; };
+		18005D472787C7AB00D13C2C /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18005D462787C7AB00D13C2C /* MenuListView.swift */; };
+		183060E42787E37B0086945F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E32787E37B0086945F /* ItemDetailView.swift */; };
+		183060E6278801B30086945F /* BannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E5278801B30086945F /* BannerImage.swift */; };
+		184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CA27863C41003CC626 /* NavigationConfigurator.swift */; };
+		184043CD2786402D003CC626 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CC2786402D003CC626 /* GridView.swift */; };
+		184043CF278640E0003CC626 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CE278640E0003CC626 /* ListItemView.swift */; };
+		184043D12786415B003CC626 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043D02786415B003CC626 /* CardModifier.swift */; };
+		18478B68278A3BA70040AC26 /* ItemDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18478B67278A3BA70040AC26 /* ItemDetailModel.swift */; };
+		18707701278931DB00A3E044 /* HeadlineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18707700278931DB00A3E044 /* HeadlineTextView.swift */; };
+		1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870770227893D3100A3E044 /* HalfSheetView.swift */; };
+		187077052789417100A3E044 /* AddItemStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187077042789417100A3E044 /* AddItemStepper.swift */; };
+		1870770A2789485B00A3E044 /* ItemDescriptionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187077092789485B00A3E044 /* ItemDescriptionVIew.swift */; };
+		1870770C27894A3200A3E044 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870770B27894A3200A3E044 /* ButtonView.swift */; };
+		189298AD2783BE960075E5C8 /* Budgeteer_FoodApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298AC2783BE960075E5C8 /* Budgeteer_FoodApp.swift */; };
+		189298AF2783BE960075E5C8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298AE2783BE960075E5C8 /* ContentView.swift */; };
+		189298B12783BE980075E5C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189298B02783BE980075E5C8 /* Assets.xcassets */; };
+		189298B42783BE980075E5C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189298B32783BE980075E5C8 /* Preview Assets.xcassets */; };
+		189298B62783BE980075E5C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298B52783BE980075E5C8 /* Persistence.swift */; };
+		189298B92783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */; };
+		189298C02783C8940075E5C8 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298BF2783C8940075E5C8 /* ColorManager.swift */; };
+		189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298C52783D43A0075E5C8 /* DisneyModel.swift */; };
+		189298C92783D4BE0075E5C8 /* disneyWorldParks.json in Resources */ = {isa = PBXBuildFile; fileRef = 189298C82783D4BE0075E5C8 /* disneyWorldParks.json */; };
+		189298CB2783D5AE0075E5C8 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298CA2783D5AE0075E5C8 /* Plan.swift */; };
+		189298CD2783D6110075E5C8 /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298CC2783D6110075E5C8 /* CodableBundleExtension.swift */; };
+		189298D02783D63F0075E5C8 /* TabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 189298CF2783D63F0075E5C8 /* TabBar */; };
+		189298D22783D6790075E5C8 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298D12783D6790075E5C8 /* TabBarViewModel.swift */; };
+		189298D42783DB080075E5C8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298D32783DB080075E5C8 /* MainView.swift */; };
+		189298D62783DB940075E5C8 /* CustomTabBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298D52783DB940075E5C8 /* CustomTabBarStyle.swift */; };
+		189298D92783DBC10075E5C8 /* CustomTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298D82783DBC10075E5C8 /* CustomTabBarItem.swift */; };
+		189298DB2783DC1C0075E5C8 /* MyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298DA2783DC1C0075E5C8 /* MyPlanView.swift */; };
+		189298DD2783DC280075E5C8 /* BudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298DC2783DC280075E5C8 /* BudgetView.swift */; };
+		189298DF2783DC350075E5C8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298DE2783DC350075E5C8 /* SettingsView.swift */; };
+		189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E02783E9470075E5C8 /* ChartRingView.swift */; };
+		189298E32783ED340075E5C8 /* ChartCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E22783ED340075E5C8 /* ChartCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18005D442787C3F000D13C2C /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
+		18005D462787C7AB00D13C2C /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
+		183060E32787E37B0086945F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
+		183060E5278801B30086945F /* BannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImage.swift; sourceTree = "<group>"; };
+		184043CA27863C41003CC626 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
+		184043CC2786402D003CC626 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		184043CE278640E0003CC626 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
+		184043D02786415B003CC626 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		18478B67278A3BA70040AC26 /* ItemDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailModel.swift; sourceTree = "<group>"; };
+		18707700278931DB00A3E044 /* HeadlineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTextView.swift; sourceTree = "<group>"; };
+		1870770227893D3100A3E044 /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
+		187077042789417100A3E044 /* AddItemStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemStepper.swift; sourceTree = "<group>"; };
+		187077092789485B00A3E044 /* ItemDescriptionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDescriptionVIew.swift; sourceTree = "<group>"; };
+		1870770B27894A3200A3E044 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		189298A92783BE960075E5C8 /* Budgeteer-Food.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Budgeteer-Food.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		189298AC2783BE960075E5C8 /* Budgeteer_FoodApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budgeteer_FoodApp.swift; sourceTree = "<group>"; };
+		189298AE2783BE960075E5C8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		189298B02783BE980075E5C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		189298B32783BE980075E5C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		189298B52783BE980075E5C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Budgeteer_Food.xcdatamodel; sourceTree = "<group>"; };
+		189298BF2783C8940075E5C8 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
+		189298C52783D43A0075E5C8 /* DisneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyModel.swift; sourceTree = "<group>"; };
+		189298C82783D4BE0075E5C8 /* disneyWorldParks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = disneyWorldParks.json; sourceTree = "<group>"; };
+		189298CA2783D5AE0075E5C8 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		189298CC2783D6110075E5C8 /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		189298D12783D6790075E5C8 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		189298D32783DB080075E5C8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		189298D52783DB940075E5C8 /* CustomTabBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarStyle.swift; sourceTree = "<group>"; };
+		189298D82783DBC10075E5C8 /* CustomTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarItem.swift; sourceTree = "<group>"; };
+		189298DA2783DC1C0075E5C8 /* MyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanView.swift; sourceTree = "<group>"; };
+		189298DC2783DC280075E5C8 /* BudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetView.swift; sourceTree = "<group>"; };
+		189298DE2783DC350075E5C8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		189298E02783E9470075E5C8 /* ChartRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRingView.swift; sourceTree = "<group>"; };
+		189298E22783ED340075E5C8 /* ChartCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		189298A62783BE960075E5C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189298D02783D63F0075E5C8 /* TabBar in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18707708278945E700A3E044 /* ItemDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				183060E32787E37B0086945F /* ItemDetailView.swift */,
+			);
+			path = ItemDetailView;
+			sourceTree = "<group>";
+		};
+		189298A02783BE960075E5C8 = {
+			isa = PBXGroup;
+			children = (
+				189298AB2783BE960075E5C8 /* Budgeteer-Food */,
+				189298AA2783BE960075E5C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		189298AA2783BE960075E5C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				189298A92783BE960075E5C8 /* Budgeteer-Food.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		189298AB2783BE960075E5C8 /* Budgeteer-Food */ = {
+			isa = PBXGroup;
+			children = (
+				189298AC2783BE960075E5C8 /* Budgeteer_FoodApp.swift */,
+				189298C72783D45A0075E5C8 /* Data */,
+				189298C42783CC270075E5C8 /* Utilities */,
+				189298C32783CC0D0075E5C8 /* Model */,
+				189298C22783CB460075E5C8 /* ViewComponents */,
+				189298C12783CA280075E5C8 /* View */,
+				189298B02783BE980075E5C8 /* Assets.xcassets */,
+				189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */,
+				189298B22783BE980075E5C8 /* Preview Content */,
+			);
+			path = "Budgeteer-Food";
+			sourceTree = "<group>";
+		};
+		189298B22783BE980075E5C8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				189298B32783BE980075E5C8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		189298C12783CA280075E5C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				189298AE2783BE960075E5C8 /* ContentView.swift */,
+				189298D32783DB080075E5C8 /* MainView.swift */,
+				189298DA2783DC1C0075E5C8 /* MyPlanView.swift */,
+				189298DC2783DC280075E5C8 /* BudgetView.swift */,
+				189298DE2783DC350075E5C8 /* SettingsView.swift */,
+				18005D442787C3F000D13C2C /* RestaurantView.swift */,
+				18005D462787C7AB00D13C2C /* MenuListView.swift */,
+				18707708278945E700A3E044 /* ItemDetailView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		189298C22783CB460075E5C8 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				189298D72783DBAF0075E5C8 /* TabBar */,
+				189298E02783E9470075E5C8 /* ChartRingView.swift */,
+				189298E22783ED340075E5C8 /* ChartCardView.swift */,
+				184043CC2786402D003CC626 /* GridView.swift */,
+				184043CE278640E0003CC626 /* ListItemView.swift */,
+				184043D02786415B003CC626 /* CardModifier.swift */,
+				183060E5278801B30086945F /* BannerImage.swift */,
+				18707700278931DB00A3E044 /* HeadlineTextView.swift */,
+				1870770227893D3100A3E044 /* HalfSheetView.swift */,
+				187077042789417100A3E044 /* AddItemStepper.swift */,
+				187077092789485B00A3E044 /* ItemDescriptionVIew.swift */,
+				1870770B27894A3200A3E044 /* ButtonView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		189298C32783CC0D0075E5C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				189298C52783D43A0075E5C8 /* DisneyModel.swift */,
+				189298CA2783D5AE0075E5C8 /* Plan.swift */,
+				18478B67278A3BA70040AC26 /* ItemDetailModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		189298C42783CC270075E5C8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				189298BF2783C8940075E5C8 /* ColorManager.swift */,
+				184043CA27863C41003CC626 /* NavigationConfigurator.swift */,
+				189298CC2783D6110075E5C8 /* CodableBundleExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		189298C72783D45A0075E5C8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				189298B52783BE980075E5C8 /* Persistence.swift */,
+				189298C82783D4BE0075E5C8 /* disneyWorldParks.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		189298D72783DBAF0075E5C8 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				189298D12783D6790075E5C8 /* TabBarViewModel.swift */,
+				189298D52783DB940075E5C8 /* CustomTabBarStyle.swift */,
+				189298D82783DBC10075E5C8 /* CustomTabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		189298A82783BE960075E5C8 /* Budgeteer-Food */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 189298BC2783BE980075E5C8 /* Build configuration list for PBXNativeTarget "Budgeteer-Food" */;
+			buildPhases = (
+				189298A52783BE960075E5C8 /* Sources */,
+				189298A62783BE960075E5C8 /* Frameworks */,
+				189298A72783BE960075E5C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Budgeteer-Food";
+			packageProductDependencies = (
+				189298CF2783D63F0075E5C8 /* TabBar */,
+			);
+			productName = "Budgeteer-Food";
+			productReference = 189298A92783BE960075E5C8 /* Budgeteer-Food.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		189298A12783BE960075E5C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					189298A82783BE960075E5C8 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 189298A42783BE960075E5C8 /* Build configuration list for PBXProject "Budgeteer-Food" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 189298A02783BE960075E5C8;
+			packageReferences = (
+				189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */,
+			);
+			productRefGroup = 189298AA2783BE960075E5C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				189298A82783BE960075E5C8 /* Budgeteer-Food */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		189298A72783BE960075E5C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189298B42783BE980075E5C8 /* Preview Assets.xcassets in Resources */,
+				189298B12783BE980075E5C8 /* Assets.xcassets in Resources */,
+				189298C92783D4BE0075E5C8 /* disneyWorldParks.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		189298A52783BE960075E5C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184043CD2786402D003CC626 /* GridView.swift in Sources */,
+				189298DF2783DC350075E5C8 /* SettingsView.swift in Sources */,
+				189298CD2783D6110075E5C8 /* CodableBundleExtension.swift in Sources */,
+				18478B68278A3BA70040AC26 /* ItemDetailModel.swift in Sources */,
+				189298D22783D6790075E5C8 /* TabBarViewModel.swift in Sources */,
+				189298B62783BE980075E5C8 /* Persistence.swift in Sources */,
+				184043D12786415B003CC626 /* CardModifier.swift in Sources */,
+				189298D42783DB080075E5C8 /* MainView.swift in Sources */,
+				189298E32783ED340075E5C8 /* ChartCardView.swift in Sources */,
+				183060E6278801B30086945F /* BannerImage.swift in Sources */,
+				189298C02783C8940075E5C8 /* ColorManager.swift in Sources */,
+				189298CB2783D5AE0075E5C8 /* Plan.swift in Sources */,
+				189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */,
+				189298DB2783DC1C0075E5C8 /* MyPlanView.swift in Sources */,
+				183060E42787E37B0086945F /* ItemDetailView.swift in Sources */,
+				1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */,
+				189298B92783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld in Sources */,
+				18707701278931DB00A3E044 /* HeadlineTextView.swift in Sources */,
+				18005D452787C3F000D13C2C /* RestaurantView.swift in Sources */,
+				18005D472787C7AB00D13C2C /* MenuListView.swift in Sources */,
+				189298D92783DBC10075E5C8 /* CustomTabBarItem.swift in Sources */,
+				189298AF2783BE960075E5C8 /* ContentView.swift in Sources */,
+				189298D62783DB940075E5C8 /* CustomTabBarStyle.swift in Sources */,
+				184043CF278640E0003CC626 /* ListItemView.swift in Sources */,
+				189298DD2783DC280075E5C8 /* BudgetView.swift in Sources */,
+				189298AD2783BE960075E5C8 /* Budgeteer_FoodApp.swift in Sources */,
+				184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */,
+				187077052789417100A3E044 /* AddItemStepper.swift in Sources */,
+				1870770C27894A3200A3E044 /* ButtonView.swift in Sources */,
+				1870770A2789485B00A3E044 /* ItemDescriptionVIew.swift in Sources */,
+				189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		189298BA2783BE980075E5C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		189298BB2783BE980075E5C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		189298BD2783BE980075E5C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Budgeteer-Food/Preview Content\"";
+				DEVELOPMENT_TEAM = AGU49S8C2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrittanyRima.Budgeteer-Food";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		189298BE2783BE980075E5C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Budgeteer-Food/Preview Content\"";
+				DEVELOPMENT_TEAM = AGU49S8C2X;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BrittanyRima.Budgeteer-Food";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		189298A42783BE960075E5C8 /* Build configuration list for PBXProject "Budgeteer-Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189298BA2783BE980075E5C8 /* Debug */,
+				189298BB2783BE980075E5C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		189298BC2783BE980075E5C8 /* Build configuration list for PBXNativeTarget "Budgeteer-Food" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				189298BD2783BE980075E5C8 /* Debug */,
+				189298BE2783BE980075E5C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onl1ner/TabBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		189298CF2783D63F0075E5C8 /* TabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */;
+			productName = TabBar;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */,
+			);
+			currentVersion = 189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */;
+			path = Budgeteer_Food.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 189298A12783BE960075E5C8 /* Project object */;
+}

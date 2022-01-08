@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "TabBar",
+        "repositoryURL": "https://github.com/onl1ner/TabBar.git",
+        "state": {
+          "branch": null,
+          "revision": "23f403a7b257a3ae9f130d7df9178eaaf7170a69",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
