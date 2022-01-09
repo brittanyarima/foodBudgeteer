@@ -20,61 +20,74 @@ struct ItemDetailView: View {
     
     //MARK: - BODY
     var body: some View {
-            
+        
         GeometryReader { geo in
             ZStack {
                 HalfSheetView()
+                
+                VStack {
+                    Spacer()
+                    
                     
                     VStack {
-                        Spacer()
+                        ItemDetailHeaderView(item: menuItem.item, price: menuItem.price, category: menuItem.category)
                         
-                        
-                        VStack {
-                            // Item Name
-                            Text(menuItem.item)
-                                .font(.system(size: 30, weight: .black, design: .default))
-                            .foregroundColor(ColorManager.purple)
-                        
-                            // Item Price
-                            Text("$" + menuItem.price)
-                                .font(.system(size: 25, weight: .bold, design: .default))
-                            
-                            // Item stepper
-                            AddItemStepper(menuItem: menuItem)
-                            
-                            // Item description
+                        // Description & Allergy
+                        Group {
                             if menuItem.description != nil {
                                 ItemDescriptionVIew(headline: "Description", text: menuItem.description!)
+                            } else {
+                                ItemDescriptionVIew(headline: "Oh boy!", text: "There are no other details for this item.")
                             }
                             
-                            // Allergy info
                             if menuItem.allergyFriendlyOptions != nil {
-                                ItemDescriptionVIew(headline: "Allergy-Friendly Options", text: menuItem.allergyFriendlyOptions!)
+                                ItemDescriptionVIew(headline: "Allergy-Friendly", text: menuItem.allergyFriendlyOptions!)
                             }
-                            
-                    
-                            
-                            // Add to plan button
-                            Button {
-                                // add item to plan
-                                plan.add(item: itemDetail.selectedItems)
-                                print(plan.items)
-                                // show alert
-                            } label: {
-                                ButtonView(text: "Add to Plan")
-                            }
-
                         }
-                        .frame(height: geo.size.height - 100)
+                        
+                        
+                        Spacer()
+                        
+                        Divider()
+                            .padding(.horizontal)
+                        // Add to plan
+                        Group {
+                            Text("Think you'll buy this in the parks?")
+                                .font(.headline)
+                                .foregroundColor(ColorManager.purple)
+                                .padding(.bottom)
+                            
+                            HStack {
+                                    AddItemStepper(menuItem: menuItem)
+                                
+                                // Add to plan button
+                                Button {
+                                    // add item to plan
+                                    plan.add(item: itemDetail.selectedItems)
+                                    print(plan.items)
+                                    // show alert
+                                } label: {
+                                    ButtonView(text: "Add to Plan")
+                                }
+                                
+                            }
+                            
+                        }
+                        
+                        Spacer(minLength: 75)
+                        
+                    }
+                    .frame(height: geo.size.height - 100)
                     
                 } //: ZSTACK
-
-            .navigationTitle("Item Details")
-            .navigationBarTitleDisplayMode(.large)
+                
+                .navigationTitle("Item Details")
+                .navigationBarTitleDisplayMode(.large)
             }
         }
     }
 }
+
 
 
 //MARK: - PREVIEW

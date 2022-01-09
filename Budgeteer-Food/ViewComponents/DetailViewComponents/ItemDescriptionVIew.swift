@@ -14,14 +14,18 @@ struct ItemDescriptionVIew: View {
         VStack(alignment: .leading) {
             Text(headline)
                 .font(.headline)
-                .foregroundColor(ColorManager.purple)
+                .foregroundColor(ColorManager.darkGrey)
             Divider()
             Text(text)
                 .font(.subheadline)
                 .foregroundColor(ColorManager.gradientLight)
                 .multilineTextAlignment(.leading)
+                .padding(.bottom)
         }
-        .frame(width: 300)
+        .frame(width: 350)
+        .padding()
+        .background(ColorManager.darkGrey.opacity(0.1))
+        .cornerRadius(20)
     }
 }
 

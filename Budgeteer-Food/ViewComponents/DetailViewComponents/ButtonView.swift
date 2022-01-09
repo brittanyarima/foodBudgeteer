@@ -14,10 +14,15 @@ struct ButtonView: View {
     
     var body: some View {
      
-        VStack {
-            Text(itemDetail.itemsTotal, format: .currency(code: "USD"))
-                .foregroundColor(ColorManager.darkGrey)
-                .font(.headline)
+        VStack(spacing: 2) {
+            HStack {
+                Text("Total:")
+                    .font(.subheadline)
+                    .foregroundColor(ColorManager.purple)
+                Text(itemDetail.itemsTotal, format: .currency(code: "USD"))
+                    .foregroundColor(ColorManager.lightGrey)
+                    .font(.subheadline)
+            }
             
             ZStack {
                 Capsule()
