@@ -23,11 +23,10 @@ struct RestaurantView: View {
                         ListItemView(icon: restaurant.type, title: restaurant.name, subtitle: restaurant.type, price: nil)
                         
                     }
-                    
-                    
+                        
                 }
                 .navigationTitle(parks.name)
-                
+               
             }
         }
     }

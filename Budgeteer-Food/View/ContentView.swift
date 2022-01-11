@@ -45,7 +45,9 @@ struct ContentView: View {
                             HeadlineTextView(icon: "sparkle.magnifyingglass", text: "explore restaurants by park")
                             
                             GridView()
-                            Spacer()
+                            
+                            DisclaimerView()
+                            Spacer(minLength: 100)
                             
                         }
                     }

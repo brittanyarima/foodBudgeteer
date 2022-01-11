@@ -41,7 +41,7 @@ struct ItemDetailView: View {
                             }
                             
                             if menuItem.allergyFriendlyOptions != nil {
-                                ItemDescriptionVIew(headline: "Allergy-Friendly", text: menuItem.allergyFriendlyOptions!)
+                                ItemDescriptionVIew(headline: "Allergy-Friendly", text: menuItem.allergyFriendlyOptions! + "*Allergy options may not be exact. Please ask about options when you are at the parks.")
                             }
                         }
                         

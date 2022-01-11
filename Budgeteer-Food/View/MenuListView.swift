@@ -22,11 +22,12 @@ struct MenuListView: View {
                         ListItemView(icon: menuItem.category, title: menuItem.item, subtitle: restaurant.name, price: menuItem.price)
                     }
                 }
-                
+           DisclaimerView()
             }
-            .navigationTitle(restaurant.name)
-        .navigationBarTitleDisplayMode(.inline)
+            
         }
+        .navigationTitle(restaurant.name)
+    .navigationBarTitleDisplayMode(.inline)
     }
 }
 
