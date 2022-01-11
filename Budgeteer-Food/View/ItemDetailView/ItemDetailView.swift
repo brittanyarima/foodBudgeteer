@@ -58,26 +58,31 @@ struct ItemDetailView: View {
                                 .padding(.bottom)
                             
                             HStack {
-                                    AddItemStepper(menuItem: menuItem)
+                                AddItemStepper(menuItem: menuItem)
                                 
                                 // Add to plan button
                                 Button {
                                     // add item to plan
                                     plan.add(item: itemDetail.selectedItems)
-                                    itemDetail.reset()
+                                    
                                     showingAddToPlanAlert.toggle()
                                     
                                     // save to core data
-                                    let newItem = PlanEntity(context: moc)
-                                    newItem.id = menuItem.id
-                                    newItem.price = menuItem.price
-                                    newItem.name = menuItem.item
-                                    newItem.category = menuItem.category
-                                    newItem.restaurant = restaurant.name
-                                    newItem.total = plan.total
-                                    try? moc.save()
-
                                     
+                                    let count = 1...itemDetail.itemCount
+                                    
+                                    for _ in count {
+                                        let newItem = PlanEntity(context: moc)
+                                        newItem.id = menuItem.id
+                                        newItem.price = menuItem.price
+                                        newItem.name = menuItem.item
+                                        newItem.category = menuItem.category
+                                        newItem.restaurant = restaurant.name
+                                        newItem.total = plan.total
+                                    }
+                                    try? moc.save()
+                                    
+                                    itemDetail.reset()
                                     // show alert
                                 } label: {
                                     ButtonView(text: "Add to Plan")

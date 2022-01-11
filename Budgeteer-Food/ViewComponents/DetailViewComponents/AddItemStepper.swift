@@ -9,7 +9,12 @@ import SwiftUI
 
 struct AddItemStepper: View {
     @EnvironmentObject var itemDetail: ItemDetail
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
+    ]) var items: FetchedResults<PlanEntity>
     let menuItem: Menu
+    
     
  
     

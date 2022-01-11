@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MyPlanView: View {
     //MARK: - PROPERTIES
