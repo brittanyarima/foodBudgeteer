@@ -19,7 +19,7 @@ struct MenuListView: View {
             ScrollView(.vertical) {
                 ForEach(restaurant.menu, id: \.item) { menuItem in
                     NavigationLink(destination: ItemDetailView(menuItem: menuItem, restaurant: restaurant)) {
-                        ListItemView(icon: menuItem.category, title: menuItem.item, subtitle: restaurant.name, price: menuItem.price)
+                        ListItemView(icon: menuItem.category, title: menuItem.item, subtitle: restaurant.name, price: menuItem.price, rightImage: "chevron.right")
                     }
                 }
                 DisclaimerView()

@@ -10,7 +10,11 @@ import SwiftUI
 struct MyPlanView: View {
     //MARK: - PROPERTIES
     @EnvironmentObject var plan: Plan
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.category)]) var items: FetchedResults<PlanEntity>
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.total, ascending: false),
+        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: true)
+    ]) var items: FetchedResults<PlanEntity>
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
@@ -19,6 +23,24 @@ struct MyPlanView: View {
         //Use this if NavigationBarTitle is with displayMode = .inline
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
     }
+    
+
+    
+    // FUNCTIONS
+    func deleteItems(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this item in our fetch request
+            let item = items[offset]
+
+            // delete it from the context
+            moc.delete(item)
+        }
+        // save the context
+        try? moc.save()
+    }
+    
+    
+    
     //MARK: - BODY
     var body: some View {
         NavigationView {
@@ -31,16 +53,18 @@ struct MyPlanView: View {
                             
                             // current total
                             PlanTotalView()
-                            ScrollView(.vertical) {
+                            
+                            List {
                                 
-                                List {
                                     ForEach(items) { item in
-                                        ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price")
+                                        ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price", rightImage: "chevron.right")
                                     }
+                                    .onDelete(perform: deleteItems)
                                     
-                                }
+                                
                                 
                             } //: SCROLL
+                            .padding(.top, 100)
                         } //: VSTACK
                     } //: ZSTACK
                 

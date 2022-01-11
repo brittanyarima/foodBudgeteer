@@ -65,6 +65,18 @@ struct ItemDetailView: View {
                                     // add item to plan
                                     plan.add(item: itemDetail.selectedItems)
                                     itemDetail.reset()
+                                    showingAddToPlanAlert.toggle()
+                                    
+                                    // save to core data
+                                    let newItem = PlanEntity(context: moc)
+                                    newItem.id = menuItem.id
+                                    newItem.price = menuItem.price
+                                    newItem.name = menuItem.item
+                                    newItem.category = menuItem.category
+                                    newItem.restaurant = restaurant.name
+                                    newItem.total = plan.total
+                                    try? moc.save()
+
                                     
                                     // show alert
                                 } label: {
@@ -81,7 +93,9 @@ struct ItemDetailView: View {
                     .frame(height: geo.size.height - 100)
                     
                 } //: ZSTACK
-                
+                .alert(isPresented: $showingAddToPlanAlert) {
+                    Alert(title: Text("Added to plan"), message: Text("Item added to your plan."), dismissButton: .default(Text("OK")))
+                }
                 .navigationTitle("Item Details")
                 .navigationBarTitleDisplayMode(.large)
             }

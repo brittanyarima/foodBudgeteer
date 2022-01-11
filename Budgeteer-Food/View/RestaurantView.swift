@@ -20,7 +20,7 @@ struct RestaurantView: View {
             ScrollView(.vertical) {
                 ForEach(parks.restaurants) { restaurant in
                     NavigationLink(destination: MenuListView(restaurant: restaurant, park: parks)) {
-                        ListItemView(icon: restaurant.type, title: restaurant.name, subtitle: restaurant.type, price: nil)
+                        ListItemView(icon: restaurant.type, title: restaurant.name, subtitle: restaurant.type, price: nil, rightImage: "chevron.right")
                         
                     }
                         

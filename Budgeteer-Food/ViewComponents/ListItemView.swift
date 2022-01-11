@@ -13,6 +13,7 @@ struct ListItemView: View {
     var title: String
     var subtitle: String
     var price: String?
+    var rightImage: String
     
     //MARK: - BODY
     var body: some View {
@@ -51,7 +52,7 @@ struct ListItemView: View {
             .padding(.trailing, 20)
             Spacer()
             
-            Image(systemName: "chevron.right")
+            Image(systemName: rightImage)
                 .foregroundColor(ColorManager.purple)
                 .font(.title2)
                 .padding()
@@ -68,6 +69,6 @@ struct ListItemView: View {
 //MARK: - PREVIEW
 struct ListItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ListItemView(icon: "food",title: "Hamburger", subtitle: "Restaurant Name", price: "12.99")
+        ListItemView(icon: "food",title: "Hamburger", subtitle: "Restaurant Name", price: "12.99", rightImage: "chevron.right")
     }
 }

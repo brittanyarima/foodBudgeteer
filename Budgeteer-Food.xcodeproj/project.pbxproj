@@ -177,8 +177,8 @@
 				183060E5278801B30086945F /* BannerImage.swift */,
 				18707700278931DB00A3E044 /* HeadlineTextView.swift */,
 				18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */,
-				18F91383278A955A007847C1 /* DetailViewComponents */,
 				18674B6C278D093700E78D6D /* PlanTotalView.swift */,
+				18F91383278A955A007847C1 /* DetailViewComponents */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";

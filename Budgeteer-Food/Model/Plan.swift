@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 class Plan: ObservableObject {
     @Published var items = [Menu]()
@@ -37,9 +38,10 @@ class Plan: ObservableObject {
     // add item to plan
     func add(item: [Menu]) {
         items.append(contentsOf: item)
-        // save to Core Data
+        
     }
     
+
     // remove item from plan
     func remove(item: Menu) {
         if let index = items.firstIndex(of: item) {
