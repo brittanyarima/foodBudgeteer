@@ -15,7 +15,8 @@
 		184043CD2786402D003CC626 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CC2786402D003CC626 /* GridView.swift */; };
 		184043CF278640E0003CC626 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CE278640E0003CC626 /* ListItemView.swift */; };
 		184043D12786415B003CC626 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043D02786415B003CC626 /* CardModifier.swift */; };
-		18478B68278A3BA70040AC26 /* ItemDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18478B67278A3BA70040AC26 /* ItemDetailModel.swift */; };
+		18478B68278A3BA70040AC26 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18478B67278A3BA70040AC26 /* ItemDetail.swift */; };
+		18674B6D278D093700E78D6D /* PlanTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18674B6C278D093700E78D6D /* PlanTotalView.swift */; };
 		18707701278931DB00A3E044 /* HeadlineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18707700278931DB00A3E044 /* HeadlineTextView.swift */; };
 		1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870770227893D3100A3E044 /* HalfSheetView.swift */; };
 		187077052789417100A3E044 /* AddItemStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187077042789417100A3E044 /* AddItemStepper.swift */; };
@@ -56,7 +57,8 @@
 		184043CC2786402D003CC626 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		184043CE278640E0003CC626 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		184043D02786415B003CC626 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
-		18478B67278A3BA70040AC26 /* ItemDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailModel.swift; sourceTree = "<group>"; };
+		18478B67278A3BA70040AC26 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		18674B6C278D093700E78D6D /* PlanTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTotalView.swift; sourceTree = "<group>"; };
 		18707700278931DB00A3E044 /* HeadlineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTextView.swift; sourceTree = "<group>"; };
 		1870770227893D3100A3E044 /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
 		187077042789417100A3E044 /* AddItemStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemStepper.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				18707700278931DB00A3E044 /* HeadlineTextView.swift */,
 				18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */,
 				18F91383278A955A007847C1 /* DetailViewComponents */,
+				18674B6C278D093700E78D6D /* PlanTotalView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -185,7 +188,7 @@
 			children = (
 				189298C52783D43A0075E5C8 /* DisneyModel.swift */,
 				189298CA2783D5AE0075E5C8 /* Plan.swift */,
-				18478B67278A3BA70040AC26 /* ItemDetailModel.swift */,
+				18478B67278A3BA70040AC26 /* ItemDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,8 +315,9 @@
 				18F91380278A8CEF007847C1 /* ItemIconView.swift in Sources */,
 				184043CD2786402D003CC626 /* GridView.swift in Sources */,
 				189298DF2783DC350075E5C8 /* SettingsView.swift in Sources */,
+				18674B6D278D093700E78D6D /* PlanTotalView.swift in Sources */,
 				189298CD2783D6110075E5C8 /* CodableBundleExtension.swift in Sources */,
-				18478B68278A3BA70040AC26 /* ItemDetailModel.swift in Sources */,
+				18478B68278A3BA70040AC26 /* ItemDetail.swift in Sources */,
 				189298D22783D6790075E5C8 /* TabBarViewModel.swift in Sources */,
 				189298B62783BE980075E5C8 /* Persistence.swift in Sources */,
 				184043D12786415B003CC626 /* CardModifier.swift in Sources */,

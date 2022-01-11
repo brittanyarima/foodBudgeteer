@@ -64,7 +64,8 @@ struct ItemDetailView: View {
                                 Button {
                                     // add item to plan
                                     plan.add(item: itemDetail.selectedItems)
-                                    print(plan.items)
+                                    itemDetail.reset()
+                                    
                                     // show alert
                                 } label: {
                                     ButtonView(text: "Add to Plan")

@@ -23,6 +23,11 @@ class ItemDetail: ObservableObject {
         }
     }
     
+    func reset() {
+        selectedItems = []
+        itemCount = 0
+    }
+    
     // total of selected items
     var itemsTotal: Double {
         if selectedItems.count > 0 {

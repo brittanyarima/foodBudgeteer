@@ -22,12 +22,12 @@ struct MenuListView: View {
                         ListItemView(icon: menuItem.category, title: menuItem.item, subtitle: restaurant.name, price: menuItem.price)
                     }
                 }
-           DisclaimerView()
+                DisclaimerView()
             }
             
         }
         .navigationTitle(restaurant.name)
-    .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
@@ -37,6 +37,7 @@ struct MenuListView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(Plan())
+            .environmentObject(ItemDetail())
         
     }
 }

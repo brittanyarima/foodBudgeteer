@@ -25,10 +25,11 @@ struct RestaurantView: View {
                     }
                         
                 }
-                .navigationTitle(parks.name)
+                
                
             }
         }
+        .navigationTitle(parks.name)
     }
 }
 
