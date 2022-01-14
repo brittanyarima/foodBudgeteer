@@ -16,7 +16,7 @@ struct ItemDetailView: View {
     @State private var showingAddToPlanAlert = false
     let menuItem: Menu
     let restaurant: Restaurant
-    
+   
     
     //MARK: - BODY
     var body: some View {
@@ -70,17 +70,21 @@ struct ItemDetailView: View {
                                     // save to core data
                                     
                                     let count = 1...itemDetail.itemCount
-                                    
+                                   
                                     for _ in count {
                                         let newItem = PlanEntity(context: moc)
+                                        
+                                        newItem.total = plan.total
                                         newItem.id = menuItem.id
                                         newItem.price = menuItem.price
                                         newItem.name = menuItem.item
                                         newItem.category = menuItem.category
                                         newItem.restaurant = restaurant.name
-                                        newItem.total = plan.total
+                                        
+                                        try? moc.save()
+                                        
                                     }
-                                    try? moc.save()
+                                    
                                     
                                     itemDetail.reset()
                                     // show alert

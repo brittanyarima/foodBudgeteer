@@ -9,13 +9,18 @@ import SwiftUI
 import CoreData
 
 class Plan: ObservableObject {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
+    ]) var budgetItems: FetchedResults<PlanEntity>
+    
     @Published var items = [Menu]()
     
     // user budget input
     @Published var userBudget: Double = 100.00
         
     
-    // remaining balace
+    // remaining balace -- use on view
     var balance: Double {
         let budget = userBudget
         
@@ -26,14 +31,16 @@ class Plan: ObservableObject {
         }
     }
     
-    // add item prices
+//     add item prices -- use on view 
     var total: Double {
-        if items.count > 0 {
-            return items.reduce(0) { $0 + Double($1.price)! }
+        if budgetItems.count > 0 {
+            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
         } else {
             return 0
         }
     }
+    
+   
     
     // add item to plan
     func add(item: [Menu]) {

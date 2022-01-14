@@ -13,9 +13,9 @@ struct MyPlanView: View {
     @EnvironmentObject var plan: Plan
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.total, ascending: false),
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: true)
     ]) var items: FetchedResults<PlanEntity>
+    
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
@@ -25,6 +25,8 @@ struct MyPlanView: View {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
     }
     
+    
+    
 
     
     // FUNCTIONS
@@ -32,9 +34,9 @@ struct MyPlanView: View {
         for offset in offsets {
             // find this item in our fetch request
             let item = items[offset]
-
             // delete it from the context
             moc.delete(item)
+            
         }
         // save the context
         try? moc.save()
@@ -61,6 +63,10 @@ struct MyPlanView: View {
                                         ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price", rightImage: "chevron.right")
                                     }
                                     .onDelete(perform: deleteItems)
+                                    
+                                    
+                                    
+                                    
                                     
                                 
                                 

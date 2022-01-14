@@ -13,6 +13,7 @@ struct AddItemStepper: View {
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
     ]) var items: FetchedResults<PlanEntity>
+  
     let menuItem: Menu
     
     
@@ -35,6 +36,7 @@ struct AddItemStepper: View {
                         // increase stepper
                         itemDetail.itemCount += 1
                         itemDetail.add(item: menuItem)
+                    
                         
                     } label: {
                         Image(systemName: "plus")

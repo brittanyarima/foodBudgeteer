@@ -6,19 +6,28 @@
 //
 
 import SwiftUI
+import CoreData
 
 
 struct PlanTotalView: View {
     @EnvironmentObject var plan: Plan
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.total, ascending: false)
-    ]) var items: FetchedResults<PlanEntity>
+        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
+    ]) var budgetItems: FetchedResults<PlanEntity>
+
+    var total: Double {
+        if budgetItems.count > 0 {
+            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
+        } else {
+            return 0
+        }
+    }
 
     
     var body: some View {
         VStack {
-            Text(items.first?.total ?? 0.00, format: .currency(code: "USD"))
+            Text(total, format: .currency(code: "USD"))
                 .font(.system(size: 38, weight: .bold, design: .default))
                 .fontWeight(.bold)
                 .foregroundColor(ColorManager.purple)
