@@ -23,7 +23,11 @@ struct MyPlanView: View {
 
         //Use this if NavigationBarTitle is with displayMode = .inline
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
+        
+        UITableView.appearance().backgroundColor = .clear
     }
+    
+   
     
     
     
@@ -60,19 +64,25 @@ struct MyPlanView: View {
                             List {
                                 
                                     ForEach(items) { item in
-                                        ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price", rightImage: "chevron.right")
-                                    }
+                                        
+                                        ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price", rightImage: "bag.circle")
+                                        }
                                     .onDelete(perform: deleteItems)
                                     
+                                DisclaimerView()
                                     
                                     
-                                    
+                
                                     
                                 
                                 
-                            } //: SCROLL
+                            } //: LIST
                             .padding(.top, 100)
+                            
                         } //: VSTACK
+                        .toolbar {
+                            EditButton()
+                        }
                     } //: ZSTACK
                 
             } //: GEO
