@@ -10,7 +10,6 @@ import CoreData
 
 
 struct PlanTotalView: View {
-    @EnvironmentObject var plan: Plan
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)

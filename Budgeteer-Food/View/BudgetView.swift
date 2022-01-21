@@ -6,15 +6,52 @@
 //
 
 import SwiftUI
+import HalfASheet
 
 struct BudgetView: View {
+    @EnvironmentObject var budget: Budget
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
+    ]) var budgetItems: FetchedResults<PlanEntity>
+    
+    @State private var budgetSheetIsShowing: Bool = false
+    
+    init() {
+        //Use this if NavigationBarTitle is with Large Font
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
+
+        //Use this if NavigationBarTitle is with displayMode = .inline
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
+        
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                ColorManager.background
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
+                }
+                .navigationTitle("myBudget")
+                .halfASheet(isPresented: $budgetSheetIsShowing, title: "myBudget") {
+                    
+                    // Half Sheet View -- Edit Budget
+                    
+                }
+               
+            }
+          
+        }
     }
 }
 
 struct BudgetView_Previews: PreviewProvider {
     static var previews: some View {
         BudgetView()
+            .environmentObject(Budget())
+            .environmentObject(Plan())
     }
 }

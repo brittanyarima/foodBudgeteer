@@ -17,7 +17,7 @@ class Plan: ObservableObject {
     @Published var items = [Menu]()
     
     // user budget input
-    @Published var userBudget: Double = 100.00
+    @Published var userBudget: Double = 0.00
         
     
     // remaining balace -- use on view

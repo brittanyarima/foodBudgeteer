@@ -14,8 +14,8 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = BudgetEntity(context: viewContext)
-            newItem.budget = 10
+            let newItem = PlanEntity(context: viewContext)
+            newItem.budget = "0.00"
         }
         do {
             try viewContext.save()

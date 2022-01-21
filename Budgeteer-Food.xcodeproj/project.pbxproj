@@ -11,6 +11,10 @@
 		18005D472787C7AB00D13C2C /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18005D462787C7AB00D13C2C /* MenuListView.swift */; };
 		183060E42787E37B0086945F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E32787E37B0086945F /* ItemDetailView.swift */; };
 		183060E6278801B30086945F /* BannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E5278801B30086945F /* BannerImage.swift */; };
+		183BBC74279A42E2001C0C1A /* BudgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC73279A42E2001C0C1A /* BudgetCardView.swift */; };
+		183BBC77279A522C001C0C1A /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = 183BBC76279A522C001C0C1A /* HalfASheet */; };
+		183BBC79279A52F4001C0C1A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC78279A52F4001C0C1A /* Budget.swift */; };
+		183BBC7B279A59F3001C0C1A /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */; };
 		184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CA27863C41003CC626 /* NavigationConfigurator.swift */; };
 		184043CD2786402D003CC626 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CC2786402D003CC626 /* GridView.swift */; };
 		184043CF278640E0003CC626 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CE278640E0003CC626 /* ListItemView.swift */; };
@@ -53,6 +57,9 @@
 		18005D462787C7AB00D13C2C /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
 		183060E32787E37B0086945F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		183060E5278801B30086945F /* BannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImage.swift; sourceTree = "<group>"; };
+		183BBC73279A42E2001C0C1A /* BudgetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCardView.swift; sourceTree = "<group>"; };
+		183BBC78279A52F4001C0C1A /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		184043CA27863C41003CC626 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		184043CC2786402D003CC626 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		184043CE278640E0003CC626 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
@@ -96,6 +103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				189298D02783D63F0075E5C8 /* TabBar in Frameworks */,
+				183BBC77279A522C001C0C1A /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +187,8 @@
 				18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */,
 				18674B6C278D093700E78D6D /* PlanTotalView.swift */,
 				18F91383278A955A007847C1 /* DetailViewComponents */,
+				183BBC73279A42E2001C0C1A /* BudgetCardView.swift */,
+				183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -189,6 +199,7 @@
 				189298C52783D43A0075E5C8 /* DisneyModel.swift */,
 				189298CA2783D5AE0075E5C8 /* Plan.swift */,
 				18478B67278A3BA70040AC26 /* ItemDetail.swift */,
+				183BBC78279A52F4001C0C1A /* Budget.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +264,7 @@
 			name = "Budgeteer-Food";
 			packageProductDependencies = (
 				189298CF2783D63F0075E5C8 /* TabBar */,
+				183BBC76279A522C001C0C1A /* HalfASheet */,
 			);
 			productName = "Budgeteer-Food";
 			productReference = 189298A92783BE960075E5C8 /* Budgeteer-Food.app */;
@@ -284,6 +296,7 @@
 			mainGroup = 189298A02783BE960075E5C8;
 			packageReferences = (
 				189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */,
+				183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */,
 			);
 			productRefGroup = 189298AA2783BE960075E5C8 /* Products */;
 			projectDirPath = "";
@@ -323,10 +336,12 @@
 				184043D12786415B003CC626 /* CardModifier.swift in Sources */,
 				189298D42783DB080075E5C8 /* MainView.swift in Sources */,
 				189298E32783ED340075E5C8 /* ChartCardView.swift in Sources */,
+				183BBC7B279A59F3001C0C1A /* EditBudgetView.swift in Sources */,
 				183060E6278801B30086945F /* BannerImage.swift in Sources */,
 				189298C02783C8940075E5C8 /* ColorManager.swift in Sources */,
 				189298CB2783D5AE0075E5C8 /* Plan.swift in Sources */,
 				189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */,
+				183BBC74279A42E2001C0C1A /* BudgetCardView.swift in Sources */,
 				189298DB2783DC1C0075E5C8 /* MyPlanView.swift in Sources */,
 				183060E42787E37B0086945F /* ItemDetailView.swift in Sources */,
 				1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */,
@@ -346,6 +361,7 @@
 				1870770C27894A3200A3E044 /* ButtonView.swift in Sources */,
 				1870770A2789485B00A3E044 /* ItemDescriptionVIew.swift in Sources */,
 				189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */,
+				183BBC79279A52F4001C0C1A /* Budget.swift in Sources */,
 				18A00D81278CFEDB00DDA9E3 /* DisclaimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +567,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/franklynw/HalfASheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onl1ner/TabBar.git";
@@ -562,6 +586,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		183BBC76279A522C001C0C1A /* HalfASheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */;
+			productName = HalfASheet;
+		};
 		189298CF2783D63F0075E5C8 /* TabBar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */;

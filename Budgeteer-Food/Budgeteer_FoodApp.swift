@@ -12,6 +12,7 @@ struct Budgeteer_FoodApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var plan = Plan()
     @StateObject var itemDetail = ItemDetail()
+    @StateObject var budget = Budget()
 
     var body: some Scene {
         WindowGroup {
@@ -19,6 +20,7 @@ struct Budgeteer_FoodApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(plan)
                 .environmentObject(itemDetail)
+                .environmentObject(budget)
         }
     }
 }
