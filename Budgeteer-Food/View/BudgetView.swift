@@ -16,6 +16,8 @@ struct BudgetView: View {
     ]) var budgetItems: FetchedResults<PlanEntity>
     
     @State private var budgetSheetIsShowing: Bool = false
+    @State private var updateBudget: String = ""
+    
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
@@ -36,11 +38,14 @@ struct BudgetView: View {
                     BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
                 }
                 .navigationTitle("myBudget")
-                .halfASheet(isPresented: $budgetSheetIsShowing, title: "myBudget") {
-                    
+                .halfASheet(isPresented: $budgetSheetIsShowing, title: "Edit Budget") {
                     // Half Sheet View -- Edit Budget
+                    EditBudgetView(updatedBudget: $updateBudget)
                     
-                }
+                    
+                } //: Half Sheet View
+                
+                
                
             }
           

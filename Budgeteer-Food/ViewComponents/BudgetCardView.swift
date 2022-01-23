@@ -18,6 +18,7 @@ struct BudgetCardView: View {
     ]) var fetchedBudget: FetchedResults<PlanEntity>
     
     @Binding var budgetSheetIsShowing: Bool
+
     
     
     
@@ -53,6 +54,7 @@ struct BudgetCardView: View {
         .padding()
         .background(ColorManager.darkGrey)
         .cornerRadius(12)
+        
     }
 }
 
