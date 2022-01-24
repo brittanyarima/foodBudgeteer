@@ -9,57 +9,108 @@ import SwiftUI
 
 struct EditBudgetView: View {
     @Binding var updatedBudget: String
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
+            // Title
+            HStack {
+                Text("Edit Budget")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                    .padding()
+                
+                Spacer()
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Image(systemName: "x.circle")
+                        .font(.largeTitle)
+                        .foregroundColor(ColorManager.purple)
+                }
+
+            }
+            .padding()
+            Divider()
             
-           // Current budget goes here
+         
             VStack {
-                Text("$5,321.00")
-                    .font(.system(size: 28, weight: .heavy, design: .default))
                 Text("current budget")
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(ColorManager.lightGrey)
-                    .padding(.bottom, 100)
-            }
-            .padding(.top)
+                    
+                // current budget
+                Text("$5,321.00")
+                    .font(.system(size: 44, weight: .heavy, design: .default))
+                    .foregroundColor(.white)
+                    
                 
+            }
+            .frame(width: 300, height: 175)
+            .background(ColorManager.darkGrey)
+            .cornerRadius(12)
+            .padding(.top, 50)
+            
+            
            
             
             // Set new budget
-            Text("set new budget")
-                .font(.system(size: 20, weight: .bold, design: .default))
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                
+                VStack {
+//                    Text("set new budget")
+                    
+                    HStack {
+                        Text("$")
+                            .foregroundColor(ColorManager.purple)
+                            .font(.system(size: 40, weight: .bold, design: .default))
+                            
+                        TextField("set budget...", text: $updatedBudget)
+                            .font(.title)
+                            .keyboardType(.decimalPad)
+                    }
+                    .underlineTextField()
+                    .padding(.horizontal, 75)
+                }
+                .padding()
+            }
            
             
-            TextField("Set budget", text: $updatedBudget)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding(.horizontal)
-                .padding(.bottom)
-                .frame(width: 300, height: 200, alignment: .center)
+            
+            
             
             // Submit Button -- save to core data
             Button {
                 // save to core data
                 
+                // dismiss view
+                presentationMode.wrappedValue.dismiss()
+                
             } label: {
                 Text("Update")
-                    .font(.system(size: 20, weight: .bold, design: .default))
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
                     .padding()
                     .background(ColorManager.purple)
-                    .foregroundColor(.white)
                     .cornerRadius(12)
             }
-
+            Spacer()
         
         }
-        .padding()
+        .padding(.bottom)
+        
+            
     }
 }
 
-//struct EditBudgetView_Previews: PreviewProvider {
-//    @State var updatedBudget: String = "100"
-//    static var previews: some View {
-//        EditBudgetView()
-//            .environmentObject(Plan())
-//    }
-//}
+struct EditBudgetView_Previews: PreviewProvider {
+  
+    static var previews: some View {
+       BudgetView()
+            .environmentObject(Plan())
+    }
+}

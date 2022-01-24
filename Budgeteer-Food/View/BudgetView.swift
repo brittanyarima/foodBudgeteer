@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HalfASheet
 
 struct BudgetView: View {
     @EnvironmentObject var budget: Budget
@@ -38,12 +37,9 @@ struct BudgetView: View {
                     BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
                 }
                 .navigationTitle("myBudget")
-                .halfASheet(isPresented: $budgetSheetIsShowing, title: "Edit Budget") {
-                    // Half Sheet View -- Edit Budget
+                .sheet(isPresented: $budgetSheetIsShowing, onDismiss: nil) {
                     EditBudgetView(updatedBudget: $updateBudget)
-                    
-                    
-                } //: Half Sheet View
+                }
                 
                 
                

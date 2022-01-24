@@ -12,7 +12,6 @@
 		183060E42787E37B0086945F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E32787E37B0086945F /* ItemDetailView.swift */; };
 		183060E6278801B30086945F /* BannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E5278801B30086945F /* BannerImage.swift */; };
 		183BBC74279A42E2001C0C1A /* BudgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC73279A42E2001C0C1A /* BudgetCardView.swift */; };
-		183BBC77279A522C001C0C1A /* HalfASheet in Frameworks */ = {isa = PBXBuildFile; productRef = 183BBC76279A522C001C0C1A /* HalfASheet */; };
 		183BBC79279A52F4001C0C1A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC78279A52F4001C0C1A /* Budget.swift */; };
 		183BBC7B279A59F3001C0C1A /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */; };
 		184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CA27863C41003CC626 /* NavigationConfigurator.swift */; };
@@ -48,6 +47,7 @@
 		189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E02783E9470075E5C8 /* ChartRingView.swift */; };
 		189298E32783ED340075E5C8 /* ChartCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E22783ED340075E5C8 /* ChartCardView.swift */; };
 		18A00D81278CFEDB00DDA9E3 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */; };
+		18DB238B279E6121005A9430 /* UnderlineTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */; };
 		18F91380278A8CEF007847C1 /* ItemIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9137F278A8CEF007847C1 /* ItemIconView.swift */; };
 		18F91382278A9199007847C1 /* ItemDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F91381278A9199007847C1 /* ItemDetailHeaderView.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +93,7 @@
 		189298E02783E9470075E5C8 /* ChartRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRingView.swift; sourceTree = "<group>"; };
 		189298E22783ED340075E5C8 /* ChartCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardView.swift; sourceTree = "<group>"; };
 		18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldModifier.swift; sourceTree = "<group>"; };
 		18F9137F278A8CEF007847C1 /* ItemIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemIconView.swift; sourceTree = "<group>"; };
 		18F91381278A9199007847C1 /* ItemDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +104,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				189298D02783D63F0075E5C8 /* TabBar in Frameworks */,
-				183BBC77279A522C001C0C1A /* HalfASheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +189,7 @@
 				18F91383278A955A007847C1 /* DetailViewComponents */,
 				183BBC73279A42E2001C0C1A /* BudgetCardView.swift */,
 				183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */,
+				18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -264,7 +265,6 @@
 			name = "Budgeteer-Food";
 			packageProductDependencies = (
 				189298CF2783D63F0075E5C8 /* TabBar */,
-				183BBC76279A522C001C0C1A /* HalfASheet */,
 			);
 			productName = "Budgeteer-Food";
 			productReference = 189298A92783BE960075E5C8 /* Budgeteer-Food.app */;
@@ -296,7 +296,6 @@
 			mainGroup = 189298A02783BE960075E5C8;
 			packageReferences = (
 				189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */,
-				183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */,
 			);
 			productRefGroup = 189298AA2783BE960075E5C8 /* Products */;
 			projectDirPath = "";
@@ -360,6 +359,7 @@
 				187077052789417100A3E044 /* AddItemStepper.swift in Sources */,
 				1870770C27894A3200A3E044 /* ButtonView.swift in Sources */,
 				1870770A2789485B00A3E044 /* ItemDescriptionVIew.swift in Sources */,
+				18DB238B279E6121005A9430 /* UnderlineTextFieldModifier.swift in Sources */,
 				189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */,
 				183BBC79279A52F4001C0C1A /* Budget.swift in Sources */,
 				18A00D81278CFEDB00DDA9E3 /* DisclaimerView.swift in Sources */,
@@ -567,14 +567,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/franklynw/HalfASheet";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onl1ner/TabBar.git";
@@ -586,11 +578,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		183BBC76279A522C001C0C1A /* HalfASheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 183BBC75279A522B001C0C1A /* XCRemoteSwiftPackageReference "HalfASheet" */;
-			productName = HalfASheet;
-		};
 		189298CF2783D63F0075E5C8 /* TabBar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 189298CE2783D63F0075E5C8 /* XCRemoteSwiftPackageReference "TabBar" */;
