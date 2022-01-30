@@ -9,16 +9,17 @@
 /* Begin PBXBuildFile section */
 		18005D452787C3F000D13C2C /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18005D442787C3F000D13C2C /* RestaurantView.swift */; };
 		18005D472787C7AB00D13C2C /* MenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18005D462787C7AB00D13C2C /* MenuListView.swift */; };
+		18050DC627A756F500D7948D /* CountdownCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18050DC527A756F500D7948D /* CountdownCardView.swift */; };
 		183060E42787E37B0086945F /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E32787E37B0086945F /* ItemDetailView.swift */; };
 		183060E6278801B30086945F /* BannerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183060E5278801B30086945F /* BannerImage.swift */; };
 		183BBC74279A42E2001C0C1A /* BudgetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC73279A42E2001C0C1A /* BudgetCardView.swift */; };
-		183BBC79279A52F4001C0C1A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC78279A52F4001C0C1A /* Budget.swift */; };
 		183BBC7B279A59F3001C0C1A /* EditBudgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */; };
 		184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CA27863C41003CC626 /* NavigationConfigurator.swift */; };
 		184043CD2786402D003CC626 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CC2786402D003CC626 /* GridView.swift */; };
 		184043CF278640E0003CC626 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043CE278640E0003CC626 /* ListItemView.swift */; };
 		184043D12786415B003CC626 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184043D02786415B003CC626 /* CardModifier.swift */; };
-		18478B68278A3BA70040AC26 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18478B67278A3BA70040AC26 /* ItemDetail.swift */; };
+		18478B68278A3BA70040AC26 /* ItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18478B67278A3BA70040AC26 /* ItemDetailViewModel.swift */; };
+		1854F05E27A0CA3600F1985C /* BudgeteerFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1854F05C27A0CA3600F1985C /* BudgeteerFood.xcdatamodeld */; };
 		18674B6D278D093700E78D6D /* PlanTotalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18674B6C278D093700E78D6D /* PlanTotalView.swift */; };
 		18707701278931DB00A3E044 /* HeadlineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18707700278931DB00A3E044 /* HeadlineTextView.swift */; };
 		1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870770227893D3100A3E044 /* HalfSheetView.swift */; };
@@ -30,7 +31,6 @@
 		189298B12783BE980075E5C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189298B02783BE980075E5C8 /* Assets.xcassets */; };
 		189298B42783BE980075E5C8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189298B32783BE980075E5C8 /* Preview Assets.xcassets */; };
 		189298B62783BE980075E5C8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298B52783BE980075E5C8 /* Persistence.swift */; };
-		189298B92783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */; };
 		189298C02783C8940075E5C8 /* ColorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298BF2783C8940075E5C8 /* ColorManager.swift */; };
 		189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298C52783D43A0075E5C8 /* DisneyModel.swift */; };
 		189298C92783D4BE0075E5C8 /* disneyWorldParks.json in Resources */ = {isa = PBXBuildFile; fileRef = 189298C82783D4BE0075E5C8 /* disneyWorldParks.json */; };
@@ -47,6 +47,7 @@
 		189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E02783E9470075E5C8 /* ChartRingView.swift */; };
 		189298E32783ED340075E5C8 /* ChartCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189298E22783ED340075E5C8 /* ChartCardView.swift */; };
 		18A00D81278CFEDB00DDA9E3 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */; };
+		18BDE98027A61F100088A469 /* BudgetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BDE97F27A61F100088A469 /* BudgetViewModel.swift */; };
 		18DB238B279E6121005A9430 /* UnderlineTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */; };
 		18F91380278A8CEF007847C1 /* ItemIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F9137F278A8CEF007847C1 /* ItemIconView.swift */; };
 		18F91382278A9199007847C1 /* ItemDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F91381278A9199007847C1 /* ItemDetailHeaderView.swift */; };
@@ -55,16 +56,17 @@
 /* Begin PBXFileReference section */
 		18005D442787C3F000D13C2C /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		18005D462787C7AB00D13C2C /* MenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListView.swift; sourceTree = "<group>"; };
+		18050DC527A756F500D7948D /* CountdownCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownCardView.swift; sourceTree = "<group>"; };
 		183060E32787E37B0086945F /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		183060E5278801B30086945F /* BannerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerImage.swift; sourceTree = "<group>"; };
 		183BBC73279A42E2001C0C1A /* BudgetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCardView.swift; sourceTree = "<group>"; };
-		183BBC78279A52F4001C0C1A /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditBudgetView.swift; sourceTree = "<group>"; };
 		184043CA27863C41003CC626 /* NavigationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationConfigurator.swift; sourceTree = "<group>"; };
 		184043CC2786402D003CC626 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		184043CE278640E0003CC626 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		184043D02786415B003CC626 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
-		18478B67278A3BA70040AC26 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
+		18478B67278A3BA70040AC26 /* ItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewModel.swift; sourceTree = "<group>"; };
+		1854F05D27A0CA3600F1985C /* BudgeteerFood.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgeteerFood.xcdatamodel; sourceTree = "<group>"; };
 		18674B6C278D093700E78D6D /* PlanTotalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTotalView.swift; sourceTree = "<group>"; };
 		18707700278931DB00A3E044 /* HeadlineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTextView.swift; sourceTree = "<group>"; };
 		1870770227893D3100A3E044 /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
@@ -77,7 +79,6 @@
 		189298B02783BE980075E5C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189298B32783BE980075E5C8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		189298B52783BE980075E5C8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Budgeteer_Food.xcdatamodel; sourceTree = "<group>"; };
 		189298BF2783C8940075E5C8 /* ColorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorManager.swift; sourceTree = "<group>"; };
 		189298C52783D43A0075E5C8 /* DisneyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisneyModel.swift; sourceTree = "<group>"; };
 		189298C82783D4BE0075E5C8 /* disneyWorldParks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = disneyWorldParks.json; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		189298E02783E9470075E5C8 /* ChartRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartRingView.swift; sourceTree = "<group>"; };
 		189298E22783ED340075E5C8 /* ChartCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCardView.swift; sourceTree = "<group>"; };
 		18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
+		18BDE97F27A61F100088A469 /* BudgetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetViewModel.swift; sourceTree = "<group>"; };
 		18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextFieldModifier.swift; sourceTree = "<group>"; };
 		18F9137F278A8CEF007847C1 /* ItemIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemIconView.swift; sourceTree = "<group>"; };
 		18F91381278A9199007847C1 /* ItemDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		189298AB2783BE960075E5C8 /* Budgeteer-Food */ = {
 			isa = PBXGroup;
 			children = (
+				1854F05C27A0CA3600F1985C /* BudgeteerFood.xcdatamodeld */,
 				189298AC2783BE960075E5C8 /* Budgeteer_FoodApp.swift */,
 				189298C72783D45A0075E5C8 /* Data */,
 				189298C42783CC270075E5C8 /* Utilities */,
@@ -144,7 +147,6 @@
 				189298C22783CB460075E5C8 /* ViewComponents */,
 				189298C12783CA280075E5C8 /* View */,
 				189298B02783BE980075E5C8 /* Assets.xcassets */,
-				189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */,
 				189298B22783BE980075E5C8 /* Preview Content */,
 			);
 			path = "Budgeteer-Food";
@@ -187,9 +189,7 @@
 				18A00D80278CFEDB00DDA9E3 /* DisclaimerView.swift */,
 				18674B6C278D093700E78D6D /* PlanTotalView.swift */,
 				18F91383278A955A007847C1 /* DetailViewComponents */,
-				183BBC73279A42E2001C0C1A /* BudgetCardView.swift */,
-				183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */,
-				18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */,
+				18BDE97E27A61EE10088A469 /* BudgetViewComponents */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -199,8 +199,6 @@
 			children = (
 				189298C52783D43A0075E5C8 /* DisneyModel.swift */,
 				189298CA2783D5AE0075E5C8 /* Plan.swift */,
-				18478B67278A3BA70040AC26 /* ItemDetail.swift */,
-				183BBC78279A52F4001C0C1A /* Budget.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +206,7 @@
 		189298C42783CC270075E5C8 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				189298B52783BE980075E5C8 /* Persistence.swift */,
 				189298BF2783C8940075E5C8 /* ColorManager.swift */,
 				184043CA27863C41003CC626 /* NavigationConfigurator.swift */,
 				189298CC2783D6110075E5C8 /* CodableBundleExtension.swift */,
@@ -218,7 +217,6 @@
 		189298C72783D45A0075E5C8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				189298B52783BE980075E5C8 /* Persistence.swift */,
 				189298C82783D4BE0075E5C8 /* disneyWorldParks.json */,
 			);
 			path = Data;
@@ -234,9 +232,22 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		18BDE97E27A61EE10088A469 /* BudgetViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				183BBC73279A42E2001C0C1A /* BudgetCardView.swift */,
+				183BBC7A279A59F3001C0C1A /* EditBudgetView.swift */,
+				18DB238A279E6121005A9430 /* UnderlineTextFieldModifier.swift */,
+				18BDE97F27A61F100088A469 /* BudgetViewModel.swift */,
+				18050DC527A756F500D7948D /* CountdownCardView.swift */,
+			);
+			path = BudgetViewComponents;
+			sourceTree = "<group>";
+		};
 		18F91383278A955A007847C1 /* DetailViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				18478B67278A3BA70040AC26 /* ItemDetailViewModel.swift */,
 				1870770227893D3100A3E044 /* HalfSheetView.swift */,
 				187077042789417100A3E044 /* AddItemStepper.swift */,
 				187077092789485B00A3E044 /* ItemDescriptionVIew.swift */,
@@ -329,7 +340,7 @@
 				189298DF2783DC350075E5C8 /* SettingsView.swift in Sources */,
 				18674B6D278D093700E78D6D /* PlanTotalView.swift in Sources */,
 				189298CD2783D6110075E5C8 /* CodableBundleExtension.swift in Sources */,
-				18478B68278A3BA70040AC26 /* ItemDetail.swift in Sources */,
+				18478B68278A3BA70040AC26 /* ItemDetailViewModel.swift in Sources */,
 				189298D22783D6790075E5C8 /* TabBarViewModel.swift in Sources */,
 				189298B62783BE980075E5C8 /* Persistence.swift in Sources */,
 				184043D12786415B003CC626 /* CardModifier.swift in Sources */,
@@ -339,12 +350,13 @@
 				183060E6278801B30086945F /* BannerImage.swift in Sources */,
 				189298C02783C8940075E5C8 /* ColorManager.swift in Sources */,
 				189298CB2783D5AE0075E5C8 /* Plan.swift in Sources */,
+				18BDE98027A61F100088A469 /* BudgetViewModel.swift in Sources */,
+				18050DC627A756F500D7948D /* CountdownCardView.swift in Sources */,
 				189298E12783E9470075E5C8 /* ChartRingView.swift in Sources */,
 				183BBC74279A42E2001C0C1A /* BudgetCardView.swift in Sources */,
 				189298DB2783DC1C0075E5C8 /* MyPlanView.swift in Sources */,
 				183060E42787E37B0086945F /* ItemDetailView.swift in Sources */,
 				1870770327893D3100A3E044 /* HalfSheetView.swift in Sources */,
-				189298B92783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld in Sources */,
 				18707701278931DB00A3E044 /* HeadlineTextView.swift in Sources */,
 				18005D452787C3F000D13C2C /* RestaurantView.swift in Sources */,
 				18005D472787C7AB00D13C2C /* MenuListView.swift in Sources */,
@@ -357,11 +369,11 @@
 				189298AD2783BE960075E5C8 /* Budgeteer_FoodApp.swift in Sources */,
 				184043CB27863C41003CC626 /* NavigationConfigurator.swift in Sources */,
 				187077052789417100A3E044 /* AddItemStepper.swift in Sources */,
+				1854F05E27A0CA3600F1985C /* BudgeteerFood.xcdatamodeld in Sources */,
 				1870770C27894A3200A3E044 /* ButtonView.swift in Sources */,
 				1870770A2789485B00A3E044 /* ItemDescriptionVIew.swift in Sources */,
 				18DB238B279E6121005A9430 /* UnderlineTextFieldModifier.swift in Sources */,
 				189298C62783D43A0075E5C8 /* DisneyModel.swift in Sources */,
-				183BBC79279A52F4001C0C1A /* Budget.swift in Sources */,
 				18A00D81278CFEDB00DDA9E3 /* DisclaimerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,13 +598,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		189298B72783BE980075E5C8 /* Budgeteer_Food.xcdatamodeld */ = {
+		1854F05C27A0CA3600F1985C /* BudgeteerFood.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */,
+				1854F05D27A0CA3600F1985C /* BudgeteerFood.xcdatamodel */,
 			);
-			currentVersion = 189298B82783BE980075E5C8 /* Budgeteer_Food.xcdatamodel */;
-			path = Budgeteer_Food.xcdatamodeld;
+			currentVersion = 1854F05D27A0CA3600F1985C /* BudgeteerFood.xcdatamodel */;
+			path = BudgeteerFood.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

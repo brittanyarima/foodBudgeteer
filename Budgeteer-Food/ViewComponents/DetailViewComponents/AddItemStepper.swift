@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddItemStepper: View {
-    @EnvironmentObject var itemDetail: ItemDetail
+    @EnvironmentObject var itemDetail: ItemDetailViewModel
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)

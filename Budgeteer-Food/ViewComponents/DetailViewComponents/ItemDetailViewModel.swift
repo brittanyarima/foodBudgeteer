@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ItemDetail: ObservableObject {
+class ItemDetailViewModel: ObservableObject {
     @Published var selectedItems = [Menu]()
     @Published var itemCount = 0
     

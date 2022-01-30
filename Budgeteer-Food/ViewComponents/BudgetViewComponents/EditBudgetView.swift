@@ -8,8 +8,49 @@
 import SwiftUI
 
 struct EditBudgetView: View {
-    @Binding var updatedBudget: String
+    @EnvironmentObject var plan: Plan
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var vm = BudgetViewModel()
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: false)
+    ]) var budgetItems: FetchedResults<PlanEntity>
+    
+    @State private var updatedBudget = ""
+    
+    //MARK: - FUNCTIONS
+    
+    func deleteItems(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this item in our fetch request
+            let item = budgetItems[offset]
+            // delete it from the context
+            moc.delete(item)
+            
+        }
+        // save the context
+        try? moc.save()
+    }
+    
+    var total: Double {
+        if budgetItems.count > 0 {
+            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
+        } else {
+            return 0
+        }
+    }
+    
+    var balance: Double {
+        let userBudget = Double(budgetItems.first?.budget ?? "0")!
+        if total != 0 {
+            return (userBudget - total)
+        } else {
+            return 0
+        }
+    }
+    
+    //MARK: - BODY
     
     var body: some View {
         VStack {
@@ -41,7 +82,7 @@ struct EditBudgetView: View {
                     .foregroundColor(ColorManager.lightGrey)
                     
                 // current budget
-                Text("$5,321.00")
+                Text("$" + (budgetItems.first?.budget ?? "0.00"))
                     .font(.system(size: 44, weight: .heavy, design: .default))
                     .foregroundColor(.white)
                     
@@ -81,11 +122,16 @@ struct EditBudgetView: View {
             
             
             
-            
+        
             // Submit Button -- save to core data
             Button {
-                // save to core data
+                // delete old budget??
                 
+                // save new budget to core data
+                let newBudget = PlanEntity(context: moc)
+                newBudget.budget = updatedBudget
+                newBudget.balance = balance
+                try? moc.save()
                 // dismiss view
                 presentationMode.wrappedValue.dismiss()
                 
@@ -112,5 +158,6 @@ struct EditBudgetView_Previews: PreviewProvider {
     static var previews: some View {
        BudgetView()
             .environmentObject(Plan())
+            
     }
 }

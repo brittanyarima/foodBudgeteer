@@ -9,16 +9,11 @@ import SwiftUI
 import CoreData
 
 struct BudgetCardView: View {
-    @EnvironmentObject var plan: Plan
-    @EnvironmentObject var budget: Budget
+    @Binding var budgetSheetIsShowing: Bool
     
-    @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: false)
-    ]) var fetchedBudget: FetchedResults<PlanEntity>
-    
-    @Binding var budgetSheetIsShowing: Bool
-
+    ]) var budgetItems: FetchedResults<PlanEntity>
     
     
     
@@ -42,10 +37,13 @@ struct BudgetCardView: View {
                 Spacer()
                 
                 // Fetch User Budget here
-                Text("\(plan.userBudget, format: .currency(code: "USD"))")
-                    .foregroundColor(.white)
-                    .font(.system(size: 40, weight: .bold, design: .default))
-                    .padding(.bottom, 50)
+                Text("$" + (budgetItems.first?.budget ?? "0.00"))
+                        .foregroundColor(.white)
+                        .font(.system(size: 40, weight: .bold, design: .default))
+                        .padding(.bottom, 50)
+                
+                
+                
                 
             }
             

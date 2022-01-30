@@ -37,7 +37,7 @@ struct MenuListView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(Plan())
-            .environmentObject(ItemDetail())
+            .environmentObject(ItemDetailViewModel())
         
     }
 }

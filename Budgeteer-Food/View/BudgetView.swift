@@ -7,15 +7,14 @@
 
 import SwiftUI
 
+
 struct BudgetView: View {
-    @EnvironmentObject var budget: Budget
-    @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
-    ]) var budgetItems: FetchedResults<PlanEntity>
-    
     @State private var budgetSheetIsShowing: Bool = false
     @State private var updateBudget: String = ""
+    
+    @FetchRequest(sortDescriptors: [
+        NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: false)
+    ]) var budgetItems: FetchedResults<PlanEntity>
     
     
     init() {
@@ -35,10 +34,12 @@ struct BudgetView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
+                    
+                    ChartCardView()
                 }
                 .navigationTitle("myBudget")
                 .sheet(isPresented: $budgetSheetIsShowing, onDismiss: nil) {
-                    EditBudgetView(updatedBudget: $updateBudget)
+                    EditBudgetView()
                 }
                 
                 
@@ -52,7 +53,6 @@ struct BudgetView: View {
 struct BudgetView_Previews: PreviewProvider {
     static var previews: some View {
         BudgetView()
-            .environmentObject(Budget())
             .environmentObject(Plan())
     }
 }

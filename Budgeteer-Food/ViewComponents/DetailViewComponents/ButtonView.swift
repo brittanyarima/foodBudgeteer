@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonView: View {
-    @EnvironmentObject var itemDetail: ItemDetail
+    @EnvironmentObject var itemDetail: ItemDetailViewModel
     let text: String
    
     

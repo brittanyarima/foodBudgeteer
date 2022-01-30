@@ -10,7 +10,7 @@ import SwiftUI
 struct ItemDetailView: View {
     //MARK: - PROPERTIES
     @EnvironmentObject var plan: Plan
-    @EnvironmentObject var itemDetail: ItemDetail
+    @EnvironmentObject var itemDetail: ItemDetailViewModel
     @Environment(\.managedObjectContext) var moc
     
     @State private var showingAddToPlanAlert = false
@@ -119,6 +119,6 @@ struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(Plan())
-            .environmentObject(ItemDetail())
+            .environmentObject(ItemDetailViewModel())
     }
 }
