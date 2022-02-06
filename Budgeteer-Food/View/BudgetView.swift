@@ -36,6 +36,8 @@ struct BudgetView: View {
                     BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
                     
                     ChartCardView()
+                    
+                    CountdownCardView()
                 }
                 .navigationTitle("myBudget")
                 .sheet(isPresented: $budgetSheetIsShowing, onDismiss: nil) {

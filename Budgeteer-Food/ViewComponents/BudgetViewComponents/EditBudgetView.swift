@@ -10,7 +10,6 @@ import SwiftUI
 struct EditBudgetView: View {
     @EnvironmentObject var plan: Plan
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var vm = BudgetViewModel()
     @Environment(\.managedObjectContext) var moc
     
     @FetchRequest(sortDescriptors: [
