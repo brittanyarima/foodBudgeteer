@@ -6,15 +6,24 @@
 //
 
 import SwiftUI
+import CoreData
+    
 
 struct EditBudgetView: View {
     @EnvironmentObject var plan: Plan
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
+
     
-    @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: false)
-    ]) var budgetItems: FetchedResults<PlanEntity>
+    @FetchRequest(
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) var budgetItems: FetchedResults<BudgetEntity>
+    
+    @FetchRequest(
+        entity: PlanEntity.entity(),
+        sortDescriptors: []
+        ) var planItems: FetchedResults<PlanEntity>
     
     @State private var updatedBudget = ""
     
@@ -34,7 +43,7 @@ struct EditBudgetView: View {
     
     var total: Double {
         if budgetItems.count > 0 {
-            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
+            return planItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
         } else {
             return 0
         }
@@ -81,7 +90,7 @@ struct EditBudgetView: View {
                     .foregroundColor(ColorManager.lightGrey)
                     
                 // current budget
-                Text("$" + (budgetItems.first?.budget ?? "0.00"))
+                Text("$" + "\(budgetItems.startIndex)")
                     .font(.system(size: 44, weight: .heavy, design: .default))
                     .foregroundColor(.white)
                     
@@ -124,13 +133,17 @@ struct EditBudgetView: View {
         
             // Submit Button -- save to core data
             Button {
-                // delete old budget??
+                
+                
+                // delete old budget
                 
                 // save new budget to core data
-                let newBudget = PlanEntity(context: moc)
-                newBudget.budget = updatedBudget
-                newBudget.balance = balance
+    
                 try? moc.save()
+                
+                // TESTING
+                print(budgetItems)
+                
                 // dismiss view
                 presentationMode.wrappedValue.dismiss()
                 

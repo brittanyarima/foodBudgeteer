@@ -11,15 +11,22 @@ import CoreData
 struct ChartCardView: View {
 //MARK: - PROPERTIES
     @EnvironmentObject var plan: Plan
+    
+    // Core Data
     @Environment(\.managedObjectContext) var moc
+    @FetchRequest(
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) var budgetItems: FetchedResults<BudgetEntity>
+    
     @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.budget
+        NSSortDescriptor(keyPath: \PlanEntity.total
                          , ascending: false)
-    ]) var budgetItems: FetchedResults<PlanEntity>
+    ]) var planItems: FetchedResults<PlanEntity>
 
     var total: Double {
-        if budgetItems.count > 0 {
-            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
+        if planItems.count > 0 {
+            return planItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
         } else {
             return 0
         }

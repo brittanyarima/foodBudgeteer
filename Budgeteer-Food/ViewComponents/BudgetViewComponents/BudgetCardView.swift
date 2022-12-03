@@ -11,9 +11,10 @@ import CoreData
 struct BudgetCardView: View {
     @Binding var budgetSheetIsShowing: Bool
     
-    @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: false)
-    ]) var budgetItems: FetchedResults<PlanEntity>
+    @FetchRequest(
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) var budgetItems: FetchedResults<BudgetEntity>
     
     
     

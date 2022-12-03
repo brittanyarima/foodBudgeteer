@@ -13,12 +13,17 @@ struct ChartRingView: View {
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
-    ]) var budgetItems: FetchedResults<PlanEntity>
+        NSSortDescriptor(keyPath: \PlanEntity.total, ascending: false)
+    ]) var planItems: FetchedResults<PlanEntity>
+    
+    @FetchRequest(
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) var budgetItems: FetchedResults<BudgetEntity>
 
     var total: Double {
-        if budgetItems.count > 0 {
-            return budgetItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
+        if planItems.count > 0 {
+            return planItems.reduce(0) { $0 + Double($1.price ?? "0.00")! }
         } else {
             return 0
         }
@@ -34,6 +39,11 @@ struct ChartRingView: View {
         }
     }
     
+    var budget: Double {
+        let budgetDouble = Double(budgetItems.first?.budget ?? "0.00")!
+        return budgetDouble
+    }
+    
     //MARK: - BODY
     var body: some View {
         ZStack {
@@ -46,7 +56,7 @@ struct ChartRingView: View {
             
             // top ring
             Circle()
-                .trim(from: 0, to: (total / plan.userBudget))
+                .trim(from: 0, to: (total / budget))
                 .stroke(ColorManager.purple, lineWidth: 10)
                 .frame(width: (UIScreen.main.bounds.width - 150) / 2, height: (UIScreen.main.bounds.width - 150) / 2)
         }

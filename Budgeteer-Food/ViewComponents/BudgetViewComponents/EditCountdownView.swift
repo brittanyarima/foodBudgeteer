@@ -10,11 +10,17 @@ import SwiftUI
 struct EditCountdownView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var newDate = Date()
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) var budgetItems: FetchedResults<BudgetEntity>
     
     var dateToString: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
-        return(formatter.string(from: newDate))
+        return(formatter.string(from: budgetItems.first?.tripDate ?? newDate))
     }
     
     var body: some View {
@@ -35,6 +41,7 @@ struct EditCountdownView: View {
                 }
 
             } //: HSTACK
+            .padding()
             
             Divider()
            
@@ -56,7 +63,8 @@ struct EditCountdownView: View {
                 VStack {
                     Text("Update Trip Date")
                         .font(.headline)
-                    
+                        .padding(.bottom, 10)
+                   
                     DatePicker("When is your trip?", selection: $newDate, displayedComponents: .date)
                         .datePickerStyle(GraphicalDatePickerStyle())
                         .frame(width: 300, height: 300, alignment: .center)
@@ -68,6 +76,23 @@ struct EditCountdownView: View {
             
             }
             Spacer()
+            
+            Button {
+                // save to core data
+                let updatedDate = BudgetEntity(context: moc)
+                updatedDate.tripDate = newDate
+                try? moc.save()
+                
+                // testing
+                print(updatedDate)
+                
+                // dismiss
+                presentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("Update")
+                
+            }
+
             
         }
         

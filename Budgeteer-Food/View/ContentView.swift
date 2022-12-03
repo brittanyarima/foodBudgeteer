@@ -13,8 +13,9 @@ struct ContentView: View {
     //MARK: - PROPERTIES
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \PlanEntity.balance, ascending: true),NSSortDescriptor(keyPath: \PlanEntity.budget, ascending: true)]
-    ) private var budget: FetchedResults<PlanEntity>
+        entity: BudgetEntity.entity(),
+        sortDescriptors: []
+    ) private var budget: FetchedResults<BudgetEntity>
     
 
     
