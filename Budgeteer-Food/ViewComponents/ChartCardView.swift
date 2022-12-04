@@ -9,10 +9,8 @@ import SwiftUI
 import CoreData
 
 struct ChartCardView: View {
-//MARK: - PROPERTIES
+    //MARK: - PROPERTIES
     @EnvironmentObject var plan: Plan
-    
-    // Core Data
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(
         entity: BudgetEntity.entity(),
@@ -42,63 +40,49 @@ struct ChartCardView: View {
         }
     }
 
-
-    
-    //MARK: - BODY
     var body: some View {
         HStack {
-            
-                ChartRingView()
-            
+            ChartRingView()
             // TextView
             VStack(alignment: .leading) {
-               
-                
                 // Spent
                 HStack {
-                        Rectangle()
-                            .foregroundColor(ColorManager.purple)
-                            .frame(width: 10, height: 10)
-                            .cornerRadius(2)
+                    Rectangle()
+                        .foregroundColor(ColorManager.purple)
+                        .frame(width: 10, height: 10)
+                        .cornerRadius(2)
                     VStack(alignment: .leading) {
-                            Text(total, format: .currency(code: "USD"))
+                        Text(total, format: .currency(code: "USD"))
                             .foregroundColor(.white)
                             .font(.title2)
-                            Text("spent")
-                                .foregroundColor(ColorManager.lightGrey)
-                                .font(.caption)
-                            
-                        }
-
-                
-                    
+                        Text("spent")
+                            .foregroundColor(ColorManager.lightGrey)
+                            .font(.caption)
+                    }
                 }
                 // Remaining
                 HStack {
-                        Rectangle()
-                            .foregroundColor(ColorManager.lightGrey)
-                            .frame(width: 10, height: 10)
-                            .cornerRadius(2)
+                    Rectangle()
+                        .foregroundColor(ColorManager.lightGrey)
+                        .frame(width: 10, height: 10)
+                        .cornerRadius(2)
                     VStack(alignment: .leading) {
-                            Text(balance, format: .currency(code: "USD"))
+                        Text(balance, format: .currency(code: "USD"))
                             .foregroundColor(.white)
                             .font(.title2)
-                            Text("remaining")
-                                .foregroundColor(ColorManager.lightGrey)
-                                .font(.caption)
-                                
-                        }
-                        .padding(.top)
+                        Text("remaining")
+                            .foregroundColor(ColorManager.lightGrey)
+                            .font(.caption)
+                    }
+                    .padding(.top)
                 }
-            } //: TEXT
+            }
             .padding(.leading, 30)
-            
         }
         .frame(width: 300, height: 150)
         .padding()
         .background(ColorManager.darkGrey)
         .cornerRadius(12)
-        
     }
 }
 

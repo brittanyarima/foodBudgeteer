@@ -25,7 +25,6 @@ struct EditCountdownView: View {
     
     var body: some View {
         VStack {
-            // Title
             HStack {
                 Text("Edit Countdown")
                     .font(.largeTitle)
@@ -39,24 +38,20 @@ struct EditCountdownView: View {
                         .font(.largeTitle)
                         .foregroundColor(ColorManager.purple)
                 }
-
-            } //: HSTACK
+            }
             .padding()
             
             Divider()
-           
-            
+
             VStack {
                 HStack {
                     Text("Date of Trip:")
                         .font(.title2)
                         .bold()
-                    
-                    
+
                     // current trip date or "Please set trip date"
                     Text(dateToString)
                         .font(.title2)
-                        
                 }
                 .padding()
                 
@@ -64,38 +59,28 @@ struct EditCountdownView: View {
                     Text("Update Trip Date")
                         .font(.headline)
                         .padding(.bottom, 10)
-                   
+
                     DatePicker("When is your trip?", selection: $newDate, displayedComponents: .date)
                         .datePickerStyle(GraphicalDatePickerStyle())
                         .frame(width: 300, height: 300, alignment: .center)
                 }
                 .padding(.top, 100)
-                
-              
-                    
-            
             }
+
             Spacer()
-            
             Button {
                 // save to core data
                 let updatedDate = BudgetEntity(context: moc)
                 updatedDate.tripDate = newDate
                 try? moc.save()
-                
                 // testing
                 print(updatedDate)
-                
                 // dismiss
                 presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("Update")
-                
             }
-
-            
         }
-        
     }
 }
 

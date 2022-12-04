@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-// use with ZStack
 
+// use with ZStack
 struct HalfSheetView: View {
     
     var body: some View {
@@ -18,14 +18,12 @@ struct HalfSheetView: View {
                 
                 VStack {
                     Spacer()
-                    
                     VStack {
                         Rectangle()
                             .frame(height: geo.size.height - 100)
                             .cornerRadius(30, antialiased: false)
                             .foregroundColor(.white)
                     }
-                    
                 }
             }
             .edgesIgnoringSafeArea(.all)

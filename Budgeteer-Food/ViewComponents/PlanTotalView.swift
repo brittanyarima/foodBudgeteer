@@ -23,7 +23,6 @@ struct PlanTotalView: View {
         }
     }
 
-    
     var body: some View {
         VStack {
             Text(total, format: .currency(code: "USD"))
@@ -37,4 +36,3 @@ struct PlanTotalView: View {
         }
     }
 }
-

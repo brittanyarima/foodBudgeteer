@@ -10,6 +10,7 @@ import SwiftUI
 struct ItemDescriptionVIew: View {
     let headline: String
     let text: String
+
     var body: some View {
         VStack(alignment: .leading) {
             Text(headline)
@@ -31,6 +32,7 @@ struct ItemDescriptionVIew: View {
 
 struct ItemDescriptionVIew_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDescriptionVIew(headline: "Description", text: "Yummy yummy hamburger. This is a description of what you could be eating in the parks. So so so yummy.")
+        ItemDescriptionVIew(headline: "Description",
+                            text: "Yummy yummy hamburger. This is a description of what you could be eating in the parks. So so so yummy.")
     }
 }

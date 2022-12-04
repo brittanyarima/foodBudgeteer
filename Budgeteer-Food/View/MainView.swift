@@ -21,25 +21,21 @@ struct MainView: View {
     }
     
     var body: some View {
-       
-            TabBar(selection: $selection) {
-                    ContentView()
-                        .tabItem(for: Item.first)
-                
-                
-                    MyPlanView()
-                        .tabItem(for: Item.second)
-                
-                    BudgetView()
-                        .tabItem(for: Item.third)
-                
-                    SettingsView()
-                        .tabItem(for: Item.fourth)
-            
-            }
-            .tabBar(style: CustomTabBarStyle())
-            .tabItem(style: CustomTabItemStyle())
-        
+        TabBar(selection: $selection) {
+            ContentView()
+                .tabItem(for: Item.first)
+
+            MyPlanView()
+                .tabItem(for: Item.second)
+
+            BudgetView()
+                .tabItem(for: Item.third)
+
+            SettingsView()
+                .tabItem(for: Item.fourth)
+        }
+        .tabBar(style: CustomTabBarStyle())
+        .tabItem(style: CustomTabItemStyle())
     }
 }
 

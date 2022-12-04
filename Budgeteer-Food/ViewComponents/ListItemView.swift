@@ -25,7 +25,6 @@ struct ListItemView: View {
                 .frame(width: 75)
                 .padding(.all, 20)
             
-            
             VStack(alignment: .leading) {
                 Text(title)
                     .font(.system(size: 18, weight: .bold, design: .default))
@@ -38,8 +37,6 @@ struct ListItemView: View {
                     .foregroundColor(ColorManager.lightGrey)
                 
                 // MenuItem
-                
-                
                 if price != nil {
                     HStack {
                         Text("$" + price!)
@@ -56,14 +53,12 @@ struct ListItemView: View {
                 .foregroundColor(ColorManager.purple)
                 .font(.title2)
                 .padding()
-        
-        
-    }
+        }
         .frame(maxWidth: .infinity, alignment: .center)
         .background(ColorManager.darkGrey)
         .modifier(CardModifier())
         .padding(.all, 10)
-}
+    }
 }
 
 //MARK: - PREVIEW

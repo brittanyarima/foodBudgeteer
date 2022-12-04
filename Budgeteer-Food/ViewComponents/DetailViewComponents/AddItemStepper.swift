@@ -13,31 +13,25 @@ struct AddItemStepper: View {
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: false)
     ]) var items: FetchedResults<PlanEntity>
-  
     let menuItem: Menu
-    
-    
- 
-    
+
     var body: some View {
         VStack(spacing: 2) {
             Text("Quantity")
                 .font(.subheadline)
                 .foregroundColor(ColorManager.lightGrey)
+
             ZStack {
                 Capsule()
                     .frame(width: 125, height: 50)
                     .foregroundColor(ColorManager.darkGrey)
                 
                 HStack {
-                    
                     // plus button
                     Button {
                         // increase stepper
                         itemDetail.itemCount += 1
                         itemDetail.add(item: menuItem)
-                    
-                        
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(ColorManager.purple)
@@ -56,13 +50,11 @@ struct AddItemStepper: View {
                             itemDetail.itemCount -= 1
                             itemDetail.remove(item: menuItem)
                         }
-                        
                     } label: {
                         Image(systemName: "minus")
                             .foregroundColor(ColorManager.purple)
                             .font(.title3)
                     }
-
                 }
             }
         }

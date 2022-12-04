@@ -10,10 +10,8 @@ import SwiftUI
 struct ButtonView: View {
     @EnvironmentObject var itemDetail: ItemDetailViewModel
     let text: String
-   
-    
+
     var body: some View {
-     
         VStack(spacing: 2) {
             HStack {
                 Text("Total:")
@@ -23,13 +21,12 @@ struct ButtonView: View {
                     .foregroundColor(ColorManager.lightGrey)
                     .font(.subheadline)
             }
-            
+
             ZStack {
                 Capsule()
                     .frame(width: 150, height: 50)
                     .foregroundColor(ColorManager.darkGrey)
-                    
-                
+
                 HStack {
                     Image(systemName: "\(itemDetail.itemCount).circle")
                         .foregroundColor(ColorManager.purple)
@@ -40,7 +37,6 @@ struct ButtonView: View {
                         .font(.system(size: 16, weight: .bold, design: .default))
                         .padding(.trailing, 2)
                 }
-                
             }
         }
     }

@@ -14,10 +14,9 @@ struct DisclaimerView: View {
                 .foregroundColor(ColorManager.lightGrey)
             Text("Prices may not be exact. Please see final prices when you are at the parks.")
                 .font(.italic(.caption)())
-            .foregroundColor(ColorManager.lightGrey)
+                .foregroundColor(ColorManager.lightGrey)
         }
         .padding(.horizontal)
-     
     }
 }
 

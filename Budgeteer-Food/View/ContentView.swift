@@ -9,44 +9,34 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    
-    //MARK: - PROPERTIES
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         entity: BudgetEntity.entity(),
         sortDescriptors: []
     ) private var budget: FetchedResults<BudgetEntity>
-    
 
-    
-    //MARK: - BODY
     var body: some View {
         NavigationView {
             ZStack {
-                        ColorManager.background
-                            .edgesIgnoringSafeArea(.all)
-                        
-                        
-                        ScrollView(.vertical) {
-                            VStack {
-                                BannerImage()
-                                    .padding(.bottom, 20)
-                                
-                                
-                                HeadlineTextView(icon: "dollarsign.circle", text: "my budget")
-                                ChartCardView()
-                                    .padding(.bottom, 30)
-                                
-                                HeadlineTextView(icon: "sparkle.magnifyingglass", text: "explore restaurants by park")
-                                
-                                GridView()
-                                
-                                DisclaimerView()
-                                Spacer(minLength: 100)
-                                
-                            }
-                        }
+                ColorManager.background
+                    .edgesIgnoringSafeArea(.all)
+
+                ScrollView(.vertical) {
+                    VStack {
+                        BannerImage()
+                            .padding(.bottom, 20)
+
+                        HeadlineTextView(icon: "dollarsign.circle", text: "my budget")
+                        ChartCardView()
+                            .padding(.bottom, 30)
+
+                        HeadlineTextView(icon: "sparkle.magnifyingglass", text: "explore restaurants by park")
+                        GridView()
+                        DisclaimerView()
+                        Spacer(minLength: 100)
                     }
+                }
+            }
             .navigationBarHidden(true)
         }
         .accentColor(ColorManager.purple)

@@ -18,12 +18,12 @@ struct ItemDetailHeaderView: View {
             // Item Name
             Text(item)
                 .font(.system(size: 20, weight: .black, design: .default))
-            .foregroundColor(ColorManager.purple)
-            .padding(.horizontal, 10)
+                .foregroundColor(ColorManager.purple)
+                .padding(.horizontal, 10)
             
             Divider()
                 .padding(.horizontal)
-        
+
             // Item Price
             Text("$" + price)
                 .font(.system(size: 20, weight: .bold, design: .default))

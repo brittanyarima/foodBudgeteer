@@ -24,7 +24,6 @@ struct MenuListView: View {
                 }
                 DisclaimerView()
             }
-            
         }
         .navigationTitle(restaurant.name)
         .navigationBarTitleDisplayMode(.inline)
@@ -32,12 +31,9 @@ struct MenuListView: View {
 }
 
 struct MenuListView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         ContentView()
             .environmentObject(Plan())
             .environmentObject(ItemDetailViewModel())
-        
     }
 }

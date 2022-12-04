@@ -34,7 +34,6 @@ struct CountdownCardView: View {
                     Button {
                         // Go to Edit TripDate
                         countdownSheetIsShowing = true
-                        
                     } label: {
                         Image(systemName: "pencil.circle")
                     }
@@ -45,8 +44,7 @@ struct CountdownCardView: View {
                 Text(dateFormatter)
                     .foregroundColor(.white)
                     .font(.headline)
-                   
-                
+
                 // days til trip here
                 Text("25")
                     .font(.system(size: 50).bold())
@@ -55,9 +53,7 @@ struct CountdownCardView: View {
                     .font(.subheadline)
                     .foregroundColor(ColorManager.lightGrey)
                 Spacer()
-                
             }
-            
         }
         .frame(width: 300, height: 150)
         .padding()

@@ -16,7 +16,6 @@ struct HeadlineTextView: View {
             HStack {
                 Image(systemName: icon)
                 Text(text)
-              
             }
             .padding(.horizontal, 20)
             .foregroundColor(ColorManager.lightGrey)

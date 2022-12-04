@@ -16,22 +16,17 @@ struct ItemDetailView: View {
     @State private var showingAddToPlanAlert = false
     let menuItem: Menu
     let restaurant: Restaurant
-   
-    
-    //MARK: - BODY
+
     var body: some View {
-        
         GeometryReader { geo in
             ZStack {
                 HalfSheetView()
                 
                 VStack {
                     Spacer()
-                    
-                    
+
                     VStack {
                         ItemDetailHeaderView(item: menuItem.item, price: menuItem.price, category: menuItem.category)
-                        
                         // Description & Allergy
                         Group {
                             if menuItem.description != nil {
@@ -44,10 +39,8 @@ struct ItemDetailView: View {
                                 ItemDescriptionVIew(headline: "Allergy-Friendly", text: menuItem.allergyFriendlyOptions! + "*Allergy options may not be exact. Please ask about options when you are at the parks.")
                             }
                         }
-                        
-                        
+
                         Spacer()
-                        
                         Divider()
                             .padding(.horizontal)
                         // Add to plan
@@ -64,13 +57,11 @@ struct ItemDetailView: View {
                                 Button {
                                     // add item to plan
                                     plan.add(item: itemDetail.selectedItems)
-                                    
                                     showingAddToPlanAlert.toggle()
                                     
                                     // save to core data
-                                    
                                     let count = 1...itemDetail.itemCount
-                                   
+
                                     for _ in count {
                                         let newItem = PlanEntity(context: moc)
                                         
@@ -82,26 +73,18 @@ struct ItemDetailView: View {
                                         newItem.restaurant = restaurant.name
                                         
                                         try? moc.save()
-                                        
                                     }
-                                    
-                                    
                                     itemDetail.reset()
                                     // show alert
                                 } label: {
                                     ButtonView(text: "Add to Plan")
                                 }
-                                
                             }
-                            
                         }
-                        
                         Spacer(minLength: 75)
-                        
                     }
                     .frame(height: geo.size.height - 100)
-                    
-                } //: ZSTACK
+                }
                 .alert(isPresented: $showingAddToPlanAlert) {
                     Alert(title: Text("Added to plan"), message: Text("Item added to your plan."), dismissButton: .default(Text("OK")))
                 }
@@ -112,9 +95,6 @@ struct ItemDetailView: View {
     }
 }
 
-
-
-//MARK: - PREVIEW
 struct ItemDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

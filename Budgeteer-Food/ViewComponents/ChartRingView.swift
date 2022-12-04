@@ -10,7 +10,6 @@ import SwiftUI
 struct ChartRingView: View {
     //MARK: - PROPERTIES
     @EnvironmentObject var plan: Plan
-    
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [
         NSSortDescriptor(keyPath: \PlanEntity.total, ascending: false)
@@ -47,7 +46,6 @@ struct ChartRingView: View {
     //MARK: - BODY
     var body: some View {
         ZStack {
-            
             // bottom ring
             Circle()
                 .trim(from: 0, to: 1)

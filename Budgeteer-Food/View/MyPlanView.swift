@@ -16,7 +16,6 @@ struct MyPlanView: View {
         NSSortDescriptor(keyPath: \PlanEntity.name, ascending: true)
     ]) var items: FetchedResults<PlanEntity>
     
-    
     init() {
         //Use this if NavigationBarTitle is with Large Font
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(ColorManager.purple)]
@@ -26,70 +25,46 @@ struct MyPlanView: View {
         
         UITableView.appearance().backgroundColor = .clear
     }
-    
-   
-    
-    
-    
 
-    
-    // FUNCTIONS
+    var body: some View {
+        NavigationView {
+            GeometryReader { geometry in
+                ZStack {
+                    HalfSheetView()
+                    VStack {
+                        Spacer()
+                        // current total
+                        PlanTotalView()
+                        List {
+                            ForEach(items) { item in
+                                ListItemView(icon: item.category ?? "Unknown Category",
+                                             title: item.name ?? "Unknown Name",
+                                             subtitle: item.restaurant ?? "Unknown Restaurant",
+                                             price: item.price ?? "Unknown Price",
+                                             rightImage: "bag.circle")
+                            }
+                            .onDelete(perform: deleteItems)
+
+                            DisclaimerView()
+                        }
+                        .padding(.top, 100)
+                    }
+                    .toolbar { EditButton() }
+                }
+            }
+            .navigationTitle("myPlan")
+        }
+        .accentColor(ColorManager.purple)
+    }
+
     func deleteItems(at offsets: IndexSet) {
         for offset in offsets {
             // find this item in our fetch request
             let item = items[offset]
             // delete it from the context
             moc.delete(item)
-            
         }
-        // save the context
         try? moc.save()
-    }
-    
-    
-    
-    //MARK: - BODY
-    var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                    ZStack {
-                        HalfSheetView()
-                        
-                        VStack {
-                            Spacer()
-                            
-                            // current total
-                            PlanTotalView()
-                            
-                            List {
-                                
-                                    ForEach(items) { item in
-                                        
-                                        ListItemView(icon: item.category ?? "Unknown Category", title: item.name ?? "Unknown Name", subtitle: item.restaurant ?? "Unknown Restaurant", price: item.price ?? "Unknown Price", rightImage: "bag.circle")
-                                        }
-                                    .onDelete(perform: deleteItems)
-                                    
-                                DisclaimerView()
-                                    
-                                    
-                
-                                    
-                                
-                                
-                            } //: LIST
-                            .padding(.top, 100)
-                            
-                        } //: VSTACK
-                        .toolbar {
-                            EditButton()
-                        }
-                    } //: ZSTACK
-                
-            } //: GEO
-            .navigationTitle("myPlan")
-        }
-        .accentColor(ColorManager.purple)
-        
     }
 }
 

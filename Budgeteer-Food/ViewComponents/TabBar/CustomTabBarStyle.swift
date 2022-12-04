@@ -9,7 +9,6 @@ import SwiftUI
 import TabBar
 
 struct CustomTabBarStyle: TabBarStyle {
-    
     public func tabBar(with geometry: GeometryProxy, itemsContainer: @escaping () -> AnyView) -> some View {
         itemsContainer()
             .background(ColorManager.darkGrey)
@@ -18,5 +17,4 @@ struct CustomTabBarStyle: TabBarStyle {
             .padding(.horizontal, 64.0)
             .padding(.bottom, 16.0 + geometry.safeAreaInsets.bottom)
     }
-    
 }

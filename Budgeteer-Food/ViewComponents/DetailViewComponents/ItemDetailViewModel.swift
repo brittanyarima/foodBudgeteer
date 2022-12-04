@@ -36,5 +36,4 @@ class ItemDetailViewModel: ObservableObject {
             return 0
         }
     }
-    
 }

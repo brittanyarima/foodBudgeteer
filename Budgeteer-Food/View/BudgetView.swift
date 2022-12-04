@@ -14,14 +14,10 @@ struct BudgetView: View {
     @State private var countdownSheetIsShowing: Bool = false
     @State private var updateBudget: String = ""
 
-    
     @FetchRequest(
         entity: BudgetEntity.entity(),
         sortDescriptors: []
     ) var budgetItems: FetchedResults<BudgetEntity>
-    
-    
-    
     
     init() {
         //Use this if NavigationBarTitle is with Large Font
@@ -35,16 +31,13 @@ struct BudgetView: View {
     
     var body: some View {
         NavigationView {
-            
             ZStack {
                 ColorManager.background
                     .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical) {
                     VStack {
                         BudgetCardView(budgetSheetIsShowing: $budgetSheetIsShowing)
-                        
                         ChartCardView()
-                        
                         CountdownCardView(countdownSheetIsShowing: $countdownSheetIsShowing)
                     }
                     .navigationTitle("myBudget")
@@ -54,12 +47,8 @@ struct BudgetView: View {
                     .sheet(isPresented: $countdownSheetIsShowing, onDismiss: nil) {
                         EditCountdownView()
                     }
-                    
-                    
-                    
                 }
             }
-            
         }
     }
 }

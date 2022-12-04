@@ -13,7 +13,6 @@ struct Parks: Identifiable, Codable {
     let image: String
     let gradient: String
     let restaurants: [Restaurant]
-    
 }
 
 struct Restaurant: Identifiable, Codable {
@@ -21,7 +20,6 @@ struct Restaurant: Identifiable, Codable {
     let name: String
     let type: String
     let menu: [Menu]
-    
 }
 
 struct Menu: Codable, Equatable {
@@ -32,7 +30,5 @@ struct Menu: Codable, Equatable {
     let allergyFriendlyOptions: String?
     let category: String
     
-    var id: UUID {
-            UUID()
-        }
+    var id: UUID { UUID() }
 }

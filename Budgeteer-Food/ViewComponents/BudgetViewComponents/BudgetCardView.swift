@@ -10,14 +10,11 @@ import CoreData
 
 struct BudgetCardView: View {
     @Binding var budgetSheetIsShowing: Bool
-    
     @FetchRequest(
         entity: BudgetEntity.entity(),
         sortDescriptors: []
     ) var budgetItems: FetchedResults<BudgetEntity>
-    
-    
-    
+
     var body: some View {
         HStack {
             VStack {
@@ -26,34 +23,27 @@ struct BudgetCardView: View {
                         .foregroundColor(ColorManager.purple)
                         .font(.headline)
                     Spacer()
-                    
                     Button {
                         // Go to Edit Budget Sheet
                         self.budgetSheetIsShowing.toggle()
                     } label: {
                         Image(systemName: "pencil.circle")
                     }
-
                 }
+
                 Spacer()
                 
                 // Fetch User Budget here
                 Text("$" + (budgetItems.first?.budget ?? "0.00"))
-                        .foregroundColor(.white)
-                        .font(.system(size: 40, weight: .bold, design: .default))
-                        .padding(.bottom, 50)
-                
-                
-                
-                
+                    .foregroundColor(.white)
+                    .font(.system(size: 40, weight: .bold, design: .default))
+                    .padding(.bottom, 50)
             }
-            
         }
         .frame(width: 300, height: 150)
         .padding()
         .background(ColorManager.darkGrey)
         .cornerRadius(12)
-        
     }
 }
 

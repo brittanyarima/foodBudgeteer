@@ -40,14 +40,10 @@ class Plan: ObservableObject {
         }
     }
     
-   
-    
     // add item to plan
     func add(item: [Menu]) {
         items.append(contentsOf: item)
-        
     }
-    
 
     // remove item from plan
     func remove(item: Menu) {
@@ -62,6 +58,4 @@ class Plan: ObservableObject {
         
         return String(format: "%.1f", per)
     }
-    
-
 }

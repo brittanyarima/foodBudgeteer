@@ -16,5 +16,3 @@ struct ColorManager {
     static let purple = Color("Purple")
     static let red = Color("Red")
 }
-
-

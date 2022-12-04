@@ -16,15 +16,11 @@ struct CustomTabItemStyle: TabItemStyle {
                 Circle()
                     .foregroundColor(ColorManager.purple)
                     .frame(width: 40.0, height: 40.0)
-                    
             }
-            
             Image(systemName: icon)
                 .foregroundColor(isSelected ? .white : ColorManager.lightGrey)
                 .frame(width: 32.0, height: 32.0)
-                
         }
         .padding(.vertical, 8.0)
     }
-    
 }

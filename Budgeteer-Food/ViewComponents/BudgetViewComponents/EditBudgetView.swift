@@ -7,14 +7,14 @@
 
 import SwiftUI
 import CoreData
-    
+
 
 struct EditBudgetView: View {
     @EnvironmentObject var plan: Plan
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) var moc
+    @State private var updatedBudget = ""
 
-    
     @FetchRequest(
         entity: BudgetEntity.entity(),
         sortDescriptors: []
@@ -23,23 +23,7 @@ struct EditBudgetView: View {
     @FetchRequest(
         entity: PlanEntity.entity(),
         sortDescriptors: []
-        ) var planItems: FetchedResults<PlanEntity>
-    
-    @State private var updatedBudget = ""
-    
-    //MARK: - FUNCTIONS
-    
-    func deleteItems(at offsets: IndexSet) {
-        for offset in offsets {
-            // find this item in our fetch request
-            let item = budgetItems[offset]
-            // delete it from the context
-            moc.delete(item)
-            
-        }
-        // save the context
-        try? moc.save()
-    }
+    ) var planItems: FetchedResults<PlanEntity>
     
     var total: Double {
         if budgetItems.count > 0 {
@@ -58,18 +42,14 @@ struct EditBudgetView: View {
         }
     }
     
-    //MARK: - BODY
-    
     var body: some View {
         VStack {
-            // Title
             HStack {
                 Text("Edit Budget")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                
                     .padding()
-                
+
                 Spacer()
                 Button {
                     presentationMode.wrappedValue.dismiss()
@@ -78,45 +58,36 @@ struct EditBudgetView: View {
                         .font(.largeTitle)
                         .foregroundColor(ColorManager.purple)
                 }
-
             }
             .padding()
             Divider()
-            
-         
+
             VStack {
                 Text("current budget")
                     .font(.system(size: 20, weight: .bold, design: .default))
                     .foregroundColor(ColorManager.lightGrey)
-                    
+
                 // current budget
                 Text("$" + "\(budgetItems.startIndex)")
                     .font(.system(size: 44, weight: .heavy, design: .default))
                     .foregroundColor(.white)
-                    
-                
             }
             .frame(width: 300, height: 175)
             .background(ColorManager.darkGrey)
             .cornerRadius(12)
             .padding(.top, 50)
-            
-            
-           
-            
+
             // Set new budget
             ZStack {
                 Color.white
                     .ignoresSafeArea()
                 
                 VStack {
-//                    Text("set new budget")
-                    
                     HStack {
                         Text("$")
                             .foregroundColor(ColorManager.purple)
                             .font(.system(size: 40, weight: .bold, design: .default))
-                            
+
                         TextField("set budget...", text: $updatedBudget)
                             .font(.title)
                             .keyboardType(.decimalPad)
@@ -126,27 +97,16 @@ struct EditBudgetView: View {
                 }
                 .padding()
             }
-           
-            
-            
-            
-        
+
             // Submit Button -- save to core data
             Button {
-                
-                
                 // delete old budget
-                
+
                 // save new budget to core data
-    
                 try? moc.save()
-                
-                // TESTING
                 print(budgetItems)
-                
                 // dismiss view
                 presentationMode.wrappedValue.dismiss()
-                
             } label: {
                 Text("Update")
                     .font(.title)
@@ -157,19 +117,24 @@ struct EditBudgetView: View {
                     .cornerRadius(12)
             }
             Spacer()
-        
         }
         .padding(.bottom)
-        
-            
+    }
+
+    func deleteItems(at offsets: IndexSet) {
+        for offset in offsets {
+            // find this item in our fetch request
+            let item = budgetItems[offset]
+            // delete it from the context
+            moc.delete(item)
+        }
+        try? moc.save()
     }
 }
 
 struct EditBudgetView_Previews: PreviewProvider {
-  
     static var previews: some View {
-       BudgetView()
+        BudgetView()
             .environmentObject(Plan())
-            
     }
 }

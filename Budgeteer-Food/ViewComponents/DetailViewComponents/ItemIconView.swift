@@ -18,5 +18,3 @@ struct ItemIconView: View {
             .overlay(Circle().stroke(lineWidth: 2))
     }
 }
-
-

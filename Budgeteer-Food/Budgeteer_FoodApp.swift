@@ -19,8 +19,6 @@ struct Budgeteer_FoodApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(plan)
                 .environmentObject(itemDetail)
-          
-                
         }
     }
 }
